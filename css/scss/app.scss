@@ -1,0 +1,111 @@
+body *{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+p {
+    font-size: 0.8rem;
+}
+.navbar {
+    background-color: rgb(0, 47, 61);
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    li.nav-item {
+        &.active {
+            a.nav-link:not(.controller) {
+                border-bottom: 1px solid #b77d2b;
+            }
+        }
+        a.nav-link {
+            color: white;
+        }
+    }
+    .logo {
+        width: 150px;
+        height: 66px;
+    }
+    .controller {
+        width: 100%;
+        height: 66px;
+    }
+    .nav-link {
+        padding-top: 1.5rem;
+    }
+}
+// DON"T DO THIS LATER
+@media (min-width: 992px) {
+    .navbar .controller {
+        width: 150px;
+    }
+}
+.background-img {
+    background-size: 100% 100%;
+    &.top {
+        background-image: url(../image/top-background.jpg);
+    }
+    &.bottom {
+        background-image: url(../image/bottom-background.jpg);
+    }
+    &.founder-img {
+        background-image: url(../image/founders.jpg);
+    }
+    &.logo {
+        background-image: url(../image/logo.png);
+    }
+    &.controller {
+        background-image: url(../image/controller.svg);
+    }
+}
+.section {
+    padding-left: 10%;
+    padding-right: 10%;
+    h2 {
+        margin-bottom: 2rem;
+    }
+    .question-container {
+        margin-bottom: 1.5rem;
+        .question {
+            margin-bottom: 0.5rem;
+        }
+        .answer {
+            font-style: italic;
+        }
+    }
+    &.project {
+        background-color: rgba(0, 38, 39, 0.8);
+        color: white;
+    }
+    &.founder {
+        padding-left: 0;
+        padding-right: 0;
+        .fp-tableCell {
+            display: flex;
+            .founder-img {
+                width: 30%;
+            }
+            .founder-description {
+                padding-left: 5%;
+                padding-right: 5%;
+                width: 70%;
+            }
+        }
+    }
+    &.founder,&.faq {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black;
+    }
+    &.signup {
+        background: linear-gradient(90deg, rgba(129, 88, 24, 0.9), rgba(57, 35, 0, 0.8));
+        color: white;
+    }
+}
+.bottom-info {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    .contact {
+        margin: 2rem 0;
+    }
+    .name {
+        margin-bottom: 1rem;
+    }
+    text-align: center;
+}
