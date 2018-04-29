@@ -1,24 +1,5 @@
+var MOVE_SECTION_TIME = 1000;
 $(document).ready(function() {
-	$('#main').fullpage({
-        menu: '#menu',
-        anchors:['project', 'founder', 'signup', 'faq'],
-        paddingTop: '66px', // same as navbar-height
-        //paddingBottom: '2rem',
-        onLeave: function(e) {
-            console.log(e);
-        },
-        afterRender: function(e) {
-            $('.navbar a.nav-link[href="' + getCurrentAnchor() +'"]').parent().addClass('active');
-        },
-    });
-    
-    $(".navbar .nav-link").on("click", function(){
-        $(".navbar").find(".active").removeClass("active");
-        $(this).parent().addClass("active");
-        
-        $('.navbar-collapse').collapse('hide');
-     });
-
     // 0 - idle_1 - idle
     // 1 - idle_2 - mouse hover
     // 2 - up_1 - wheel Up
@@ -32,23 +13,93 @@ $(document).ready(function() {
     $up_2 = $('.up_2');
     $down_1 = $('.down_1');
     $down_2 = $('.down_2');
+    var timer;
 
-    $('.joystick-container').hover(function() {
+    $('.joystick-container').hover(onMouseEnter, onMouseLeave);
+    $('.joystick-container .top').mousedown(function() {
+        hideAllJ();
+        showJ($up_2);
+        joystick_state = 3;
+        
+        $.fn.fullpage.moveSectionUp();
+        timer = setInterval($.fn.fullpage.moveSectionUp, MOVE_SECTION_TIME);
+    }).mouseup(onMouseUp); 
+    $('.joystick-container .bottom').mousedown(function() {
+        hideAllJ();
+        showJ($down_2);
+        joystick_state = 5;
+
+        $.fn.fullpage.moveSectionDown();
+        timer = setInterval($.fn.fullpage.moveSectionDown, MOVE_SECTION_TIME);
+    }).mouseup(onMouseUp); 
+
+
+	$('#main').fullpage({
+        menu: '#menu',
+        anchors:['project', 'founder', 'signup', 'faq'],
+        paddingTop: '66px', // same as navbar-height
+        //paddingBottom: '2rem',
+        onLeave: onSectionleave,
+        afterLoad: afterSectionLoad,
+        afterRender: function(e) {
+            $('.navbar a.nav-link[href="' + getCurrentAnchor() +'"]').parent().addClass('active');
+        },
+    });
+    
+    $(".navbar .nav-link").on("click", function(){
+        $(".navbar").find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+        
+        $('.navbar-collapse').collapse('hide');
+     });
+
+    function onMouseEnter() {
         if (joystick_state === 0) {
             hideAllJ();
             showJ($idle_2);
             joystick_state = 1;
         }
-    }, function() {
-        if (joystick_state === 1) {
+    }
+
+    function onMouseLeave() {
+        //if (joystick_state === 1) {
+            hideAllJ();
+            showJ($idle_1);
+            joystick_state = 0;
+        //}
+    }
+
+    function onSectionleave(index, nextIndex, direction) {
+        if (joystick_state !== 3 && joystick_state !== 5) {
+            hideAllJ();
+            if (direction === 'up') {
+                showJ($up_1);
+            }
+            else if (direction === 'down') {
+                showJ($down_1);
+            }
+        }
+    }
+
+    function afterSectionLoad() {
+        if (joystick_state !== 3 && joystick_state !== 5) {
             hideAllJ();
             showJ($idle_1);
             joystick_state = 0;
         }
-    })
-    $('body').scroll(function() {
-        console.log('aa');
-    });
+    }
+
+    function onMouseUp() {
+        clearInterval(timer);
+        timer = null;
+        hideAllJ();
+        if (joystick_state === 0) {
+            showJ($idle_1);
+        }
+        else {
+            showJ($idle_2);
+        }
+    }
 
     function hideAllJ() {
        $('.joystick-container').find('.background-img').css('visibility', 'hidden');

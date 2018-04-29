@@ -103,12 +103,19 @@ p {
 .joystick-container {
   position: absolute;
   bottom: 0;
-  right: 102px; }
+  right: 102px;
+  cursor: pointer; }
+  .joystick-container .half {
+    position: absolute;
+    width: 102px;
+    height: 51px;
+    bottom: 0; }
+    .joystick-container .half.top {
+      bottom: 51px; }
   .joystick-container .background-img {
     width: 102px;
-    height: 100px;
+    height: 102px;
     position: absolute;
-    bottom: 0;
-    cursor: pointer; }
+    bottom: 0; }
     .joystick-container .background-img:not(.idle_1) {
       visibility: hidden; }
