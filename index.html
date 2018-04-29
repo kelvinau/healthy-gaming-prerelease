@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
                 <ul class="navbar-nav mt-2 mt-lg-0">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#project">About the Project</a>
                     </li>
                     <li class="nav-item">
@@ -53,7 +53,68 @@
                  </div>
             <!-- </div>
             <div class="background-img bottom"> -->
-                <div class="section signup" data-anchor="signup">third</div>
+                <div class="section signup" data-anchor="signup">
+                    <h2>Signup</h2>
+                    <p>If you're interested in joining, please tell us a little bit about yourself and register your interest below.</p>
+                    <form class="signup-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="birth_year">
+                                    <option>Birth Year</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <select class="form-control" id="gender">
+                                            <option>Gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-control" id="gender_others" placeholder="Other">
+                                 </div>                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <select class="form-control" id="country">
+                                            <option>Country</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <select class="form-control" id="city">
+                                            <option>City</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                    </select>
+                                </div>                                
+                            </div>
+                        </div>                      
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div onclick="signup()" class="background-img signup_btn"></div>
+                    </form>
+                    <p>By registering your interest, you agree to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>
+                    <p>After verifying your email, you will be eligible for a 14-day free trial of premium membership upon account registration.</p>
+                    <p>*This is not your username on our platform, it is how you wish to be referred to when we contact you.</p>
+                </div>
                 <div class="section faq" data-anchor="faq">
                     <h2>FAQ</h2>
                     <div class="question-container">
@@ -98,6 +159,15 @@
                     </div>
                 </div>
             <!-- </div> -->
+        </div>
+        <div class="joystick-container">
+
+            <div class="background-img idle_1"></div>
+            <div class="background-img idle_2"></div>
+            <div class="background-img up_1"></div>
+            <div class="background-img up_2"></div>
+            <div class="background-img down_1"></div>
+            <div class="background-img down_2"></div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>

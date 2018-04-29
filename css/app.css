@@ -24,7 +24,13 @@ p {
 
 @media (min-width: 992px) {
   .navbar .controller {
-    width: 150px; } }
+    width: 150px; }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; } }
 .background-img {
   background-size: 100% 100%; }
   .background-img.top {
@@ -37,16 +43,30 @@ p {
     background-image: url(../image/logo.png); }
   .background-img.controller {
     background-image: url(../image/controller.svg); }
+  .background-img.signup_btn {
+    background-image: url(../image/signup_btn.png); }
+  .background-img.idle_1 {
+    background-image: url(../image/joystick_idle_1.svg); }
+  .background-img.idle_2 {
+    background-image: url(../image/joystick_idle_2.svg); }
+  .background-img.up_1 {
+    background-image: url(../image/joystick_up_1.svg); }
+  .background-img.up_2 {
+    background-image: url(../image/joystick_up_2.svg); }
+  .background-img.down_1 {
+    background-image: url(../image/joystick_down_1.svg); }
+  .background-img.down_2 {
+    background-image: url(../image/joystick_down_2.svg); }
 
 .section {
   padding-left: 10%;
   padding-right: 10%; }
   .section h2 {
-    margin-bottom: 2rem; }
+    margin-bottom: 1rem; }
   .section .question-container {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.2rem; }
     .section .question-container .question {
-      margin-bottom: 0.5rem; }
+      margin-bottom: 0; }
     .section .question-container .answer {
       font-style: italic; }
   .section.project {
@@ -58,23 +78,37 @@ p {
     .section.founder .fp-tableCell {
       display: flex; }
       .section.founder .fp-tableCell .founder-img {
-        width: 30%; }
+        width: 35%; }
       .section.founder .fp-tableCell .founder-description {
         padding-left: 5%;
         padding-right: 5%;
-        width: 70%; }
+        width: 75%; }
   .section.founder, .section.faq {
     background-color: rgba(255, 255, 255, 0.8);
     color: black; }
   .section.signup {
     background: linear-gradient(90deg, rgba(129, 88, 24, 0.9), rgba(57, 35, 0, 0.8));
     color: white; }
+    .section.signup .signup-form {
+      width: 50%; }
+      .section.signup .signup-form .signup_btn {
+        cursor: pointer;
+        width: 150px;
+        height: 75px; }
 
 .bottom-info {
   font-size: 0.8rem;
-  margin-bottom: 1rem;
   text-align: center; }
-  .bottom-info .contact {
-    margin: 2rem 0; }
-  .bottom-info .name {
-    margin-bottom: 1rem; }
+
+.joystick-container {
+  position: absolute;
+  bottom: 0;
+  right: 102px; }
+  .joystick-container .background-img {
+    width: 102px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer; }
+    .joystick-container .background-img:not(.idle_1) {
+      visibility: hidden; }
