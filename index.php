@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+unset($_SESSION['csrf_token']);
+$_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -109,6 +116,7 @@
                         <div class="form-group">
                             <input type="email" class="form-control" id="email" placeholder="Email">
                         </div>
+                        <input name="csrf_token" id="csrf_token" value="<?= $_SESSION['csrf_token'] ?>" type="hidden">
                         <div onclick="signup()" class="background-img signup_btn"></div>
                     </form>
                     <p>By registering your interest, you agree to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>
@@ -170,7 +178,7 @@
             <div class="half top"></div>
             <div class="half bottom"></div>
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
         <script src="js/app.js"></script>

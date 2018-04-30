@@ -109,13 +109,18 @@ $(document).ready(function() {
         elem.css('visibility', 'visible');
     }
 
-    function signup() {
-        console.log('aaa');
-    }
 });
 
 function getCurrentAnchor() {
     var arr = window.location.href.split('/');
     var anchor = arr[arr.length - 1];
     return anchor[0] !== '#' ? '#project' : anchor;
+}
+
+function signup() {
+    var csrf_token = $('#csrf_token').val();
+    $.post('ajax.php', {csrf_token: csrf_token})
+    .then(function(res) {
+        console.log(res);
+    })
 }
