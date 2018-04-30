@@ -186,3 +186,15 @@ p {
         }
     }
 }
+.alert {
+    z-index: 10000;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    background-color: rgba(212, 237, 218, 0.9);
+    display: none;
+}

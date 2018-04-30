@@ -51,7 +51,12 @@ $(document).ready(function() {
         $(this).parent().addClass("active");
         
         $('.navbar-collapse').collapse('hide');
-     });
+    });
+
+    setTimeout(function() {
+        $('.alert-success').fadeIn(1000);
+    }, 500);
+
 
     function onMouseEnter() {
         if (joystick_state === 0) {

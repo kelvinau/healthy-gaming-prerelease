@@ -3,6 +3,33 @@ session_start();
 
 unset($_SESSION['csrf_token']);
 $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
+
+$verified = false;
+if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
+    require_once(".login-info");
+    $conn = new mysqli($SERVER, $USER, $PW, $DB);
+
+    if ($conn->connect_errno) {
+        echo "Failed to connect to the database";
+    }
+    else {
+        $TABLE = 'registration';
+        $hash = $_GET['hash'];
+
+        $stmt = $conn->prepare("SELECT email FROM {$TABLE} WHERE hash=? AND verified=FALSE");
+        $stmt->bind_param("s", $hash);
+    
+        $result = $stmt->execute();
+        $stmt->store_result();    
+    
+        if ($stmt->num_rows > 0) {
+            $sql = "UPDATE {$TABLE} SET verified = TRUE WHERE hash='{$hash}'";
+            $result = $conn->query($sql);
+            $verified = true;
+        }
+    }
+    
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,6 +39,12 @@ $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
         <link href="css/app.css" rel="stylesheet">
     </head>
     <body>
+        <?php if ($verified) : ?>
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Your Email is verified</strong>
+        </div>
+        <?php endif ?>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
             <a class="navbar-brand background-img logo" href="#"></a>
             <button class="navbar-toggler" type="button" 

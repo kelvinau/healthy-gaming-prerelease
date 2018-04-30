@@ -6,7 +6,8 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
 
     $conn = new mysqli($SERVER, $USER, $PW, $DB);
     if ($conn->connect_errno) {
-        echo "Failed to connect to MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
+        //echo "Failed to connect to MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
+        echo "Failed to connect to the database";
     }
     else {
         $TABLE = 'registration';
@@ -55,7 +56,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                         Dear {$name},<br>
                         Thank you for registering on HealthyGaming.info. 
                         If you go to the link here 
-                        <a href='https://healthygaming.info/verify.php?hash={$hash}'>https://healthygaming.info/verify.php?hash={$hash}</a> 
+                        <a href='https://healthygaming.info/?hash={$hash}'>https://healthygaming.info/?hash={$hash}</a> 
                         and verify your email, you will be eligible for a 14-day free trial of premium membership.<br>
                         Warm Regards,<br>
                         Healty Gaming
