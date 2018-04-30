@@ -92,7 +92,8 @@ p {
     .section.signup .signup-form {
       width: 60%; }
       .section.signup .signup-form .submit-container {
-        display: flex; }
+        display: flex;
+        font-weight: bold; }
         .section.signup .signup-form .submit-container .signup_btn {
           cursor: pointer;
           width: 150px;
@@ -102,8 +103,6 @@ p {
           .section.signup .signup-form .submit-container .signup_btn:focus {
             outline: none; }
         .section.signup .signup-form .submit-container .error-msg {
-          color: white;
-          font-weight: bold;
           width: 20%;
           flex-grow: 1; }
 

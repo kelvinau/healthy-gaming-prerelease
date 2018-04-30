@@ -80,7 +80,7 @@ $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
                                     <select class="form-control" id="gender" required>
                                             <option value="">Gender</option>
                                             <option value="male">Male</option>
-                                            <option value="femail">Female</option>
+                                            <option value="female">Female</option>
                                             <option value="others">Others</option>
                                     </select>
                                 </div>
@@ -117,7 +117,7 @@ $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
                         <input name="csrf_token" id="csrf_token" value="<?= $_SESSION['csrf_token'] ?>" type="hidden">
                         <div class="submit-container">
                             <button type="submit" class="background-img signup_btn"></button>
-                            <p class="error-msg">aa</p>
+                            <p class="error-msg"></p>
                         </div>
                     </form>
                     <p>By registering your interest, you agree to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>

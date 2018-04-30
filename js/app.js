@@ -132,10 +132,10 @@ function signup() {
     .then(function(res) {
         var json = JSON.parse(res);
         if (json.status === 1) {
-            $('.signup_btn').html('<p>' + json.msg + '</p>');
+            $('.submit-container').html('<p>' + json.msg + '</p>');
         }
         else {
-            $('.error-text').text(json.msg.join(', '));
+            $('.error-msg').text(json.msg.join(', '));
         }
     })
     return false;

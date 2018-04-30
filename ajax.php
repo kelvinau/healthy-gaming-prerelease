@@ -41,14 +41,31 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                     $result = $conn->query($sql);
                 } while($result->num_rows > 0);
     
-                $stmt = $conn->prepare("INSERT INTO {$TABLE} VALUES (?, ?, ?, ?, ?, ?, '{$hash}')");
+                $stmt = $conn->prepare("
+                INSERT INTO {$TABLE} (email, name, birth_year, gender, country, city, hash) 
+                VALUES (?, ?, ?, ?, ?, ?, '{$hash}')
+                ");
                 $stmt->bind_param("ssisss", $email, $name, $birth_year, $gender, $country, $city);
                 
                 if ($result = $stmt->execute()) {
                     echo json_encode(["status" => 1, "msg" => "Information submitted"]);
                     unset($_SESSION['csrf_token']);
     
+                    $email_msg = "
+                        Dear {$name},<br>
+                        Thank you for registering on HealthyGaming.info. 
+                        If you go to the link here 
+                        <a href='https://healthygaming.info/verify.php?hash={$hash}'>https://healthygaming.info/verify.php?hash={$hash}</a> 
+                        and verify your email, you will be eligible for a 14-day free trial of premium membership.<br>
+                        Warm Regards,<br>
+                        Healty Gaming
+                    ";
+                    $headers = "MIME-Version: 1.0" . "\r\n";
+                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                    $headers .= 'From: <contact@healthygaming.info>' . "\r\n";
+
                     // Send email
+                    mail($email, "Thank you for your registration on HealthyGaming.info", $email_msg, $headers);
                 }  
                 else {
                     //echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;

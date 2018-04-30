@@ -131,6 +131,7 @@ p {
             width: 60%;
             .submit-container {
                 display: flex;
+                font-weight: bold;
                 .signup_btn {
                     cursor: pointer;
                     width: 150px;
@@ -142,8 +143,6 @@ p {
                     }
                 }
                 .error-msg {
-                    color: white;
-                    font-weight: bold;
                     width: 20%;
                     flex-grow: 1;
                 }
