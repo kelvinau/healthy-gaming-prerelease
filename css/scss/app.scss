@@ -2,6 +2,9 @@ $navbar-height: 66px;
 $joystick-width: 102px;
 $joystick-height: 100px;
 
+@import "bootstrap.min.css";
+@import "jquery.fullpage.min.css";
+
 body *{
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
@@ -161,6 +164,7 @@ p {
     }
     text-align: center;
 }
+
 .joystick-container {
     position: absolute;
     bottom: 0;

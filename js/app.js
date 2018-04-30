@@ -13,6 +13,7 @@ $(document).ready(function() {
     $up_2 = $('.up_2');
     $down_1 = $('.down_1');
     $down_2 = $('.down_2');
+    var anchors = ['project', 'founder', 'signup', 'faq'];
     var timer;
 
     $('.joystick-container').hover(onMouseEnter, onMouseLeave);
@@ -36,7 +37,7 @@ $(document).ready(function() {
 
 	$('#main').fullpage({
         menu: '#menu',
-        anchors:['project', 'founder', 'signup', 'faq'],
+        anchors: anchors,
         paddingTop: '66px', // same as navbar-height
         //paddingBottom: '2rem',
         onLeave: onSectionleave,
@@ -47,8 +48,8 @@ $(document).ready(function() {
     });
     
     $(".navbar .nav-link").on("click", function(){
-        $(".navbar").find(".active").removeClass("active");
-        $(this).parent().addClass("active");
+       // $(".navbar").find(".active").removeClass("active");
+        //$(this).parent().addClass("active");
         
         $('.navbar-collapse').collapse('hide');
     });
@@ -75,6 +76,8 @@ $(document).ready(function() {
     }
 
     function onSectionleave(index, nextIndex, direction) {
+        $(".navbar").find(".active").removeClass("active");
+        $('.navbar a.nav-link[href="#' + anchors[nextIndex - 1] +'"]').parent().addClass('active');
         if (joystick_state !== 3 && joystick_state !== 5) {
             hideAllJ();
             if (direction === 'up') {

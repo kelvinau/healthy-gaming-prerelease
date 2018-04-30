@@ -27,16 +27,15 @@ if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
             $result = $conn->query($sql);
             $verified = true;
         }
-    }
-    
+    }   
 }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" rel="stylesheet">
-        <link href="css/app.css" rel="stylesheet">
+        <title>Healthy Gaming</title>
+        <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
+
     </head>
     <body>
         <?php if ($verified) : ?>
@@ -46,7 +45,7 @@ if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
         </div>
         <?php endif ?>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-            <a class="navbar-brand background-img logo" href="#"></a>
+            <a class="navbar-brand background-img logo" href="#" title="Healthy Gaming"></a>
             <button class="navbar-toggler" type="button" 
             data-toggle="collapse" data-target="#navbarToggler" 
             aria-controls="navbarTogglerDemo" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +65,7 @@ if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
                         <a class="nav-link" href="#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link background-img controller" href="#signup"></a>
+                        <a class="nav-link background-img controller" href="#signup" title="Sign Up Tab"></a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +78,7 @@ if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
                     <p>Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming. The project will provide a platform to bring gamers together as a community, and various features will be introduced to motivate users and provide the knowledge needed in order to successfully achieve individual set goals.</p>
                 </div>
                 <div class="section founder" data-anchor="founder">
-                    <div class="background-img founder-img"></div>
+                    <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div>
                     <div class="founder-description">
                         <h2>About the Founders</h2>
                         <h4>Christoffer Johansson</h4>
@@ -127,19 +126,19 @@ if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
                                 <div class="col-6">
                                     <select class="form-control" id="country" required>
                                             <option value="">Country</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Sweden">Sweden</option>
+                                            <option value="United States">United States</option>
+                                            <option value="Germany">Germany</option>
                                     </select>
                                 </div>
                                 <div class="col-6">
                                     <select class="form-control" id="city" required>
                                             <option value="">City</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option value="Vancouver">Vancouver</option>
+                                            <option value="Stockholm">Stockholm</option>
+                                            <option value="New York">New York</option>
+                                            <option value="Berlin">Berlin</option>
                                     </select>
                                 </div>                                
                             </div>
@@ -149,7 +148,7 @@ if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
                         </div>
                         <input name="csrf_token" id="csrf_token" value="<?= $_SESSION['csrf_token'] ?>" type="hidden">
                         <div class="submit-container">
-                            <button type="submit" class="background-img signup_btn"></button>
+                            <button type="submit" class="background-img signup_btn" title="Sign Up Button"></button>
                             <p class="error-msg"></p>
                         </div>
                     </form>
@@ -203,18 +202,34 @@ if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
             <!-- </div> -->
         </div>
         <div class="joystick-container">
-            <div class="background-img idle_1"></div>
-            <div class="background-img idle_2"></div>
-            <div class="background-img up_1"></div>
-            <div class="background-img up_2"></div>
-            <div class="background-img down_1"></div>
-            <div class="background-img down_2"></div>
+            <div class="background-img idle_1" title="Joystick Idle"></div>
+            <div class="background-img idle_2" title="Joystick Idle"></div>
+            <div class="background-img up_1" title="Joystick Up"></div>
+            <div class="background-img up_2" title="Joystick Up"></div>
+            <div class="background-img down_1" title="Joystick Down"></div>
+            <div class="background-img down_2" title="Joystick Down"></div>
             <div class="half top"></div>
             <div class="half bottom"></div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
-        <script src="js/app.js"></script>
+        <noscript id="deferred-styles">
+           <link href="css/app.min.css" rel="stylesheet">
+        </noscript>
+        <script>
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+        </script>
+        <script defer src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+        <script defer src="js/app.min.js"></script>
     </body>
 </html>
