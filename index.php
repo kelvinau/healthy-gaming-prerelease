@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 unset($_SESSION['csrf_token']);
@@ -60,30 +59,29 @@ $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
                  </div>
             <!-- </div>
             <div class="background-img bottom"> -->
-                <div class="section signup" data-anchor="signup">
+                <div class="section signup" data-anchor="signup" onsubmit="return signup()">
                     <h2>Signup</h2>
                     <p>If you're interested in joining, please tell us a little bit about yourself and register your interest below.</p>
                     <form class="signup-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Name">
+                            <input type="text" class="form-control" id="name" placeholder="Name" required>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="birth_year">
-                                    <option>Birth Year</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
+                            <select class="form-control" id="birth_year" required>
+                                    <option value="">Birth Year</option>
+                                    <?php foreach (range(1900, 2013) as $year):?>
+                                        <option value="<?= $year ?>"><?= $year ?></option>
+                                    <?php endforeach ?>
                             </select>
                         </div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-6">
-                                    <select class="form-control" id="gender">
-                                            <option>Gender</option>
-                                            <option>Male</option>
-                                            <option>Female</option>
-                                            <option>Others</option>
+                                    <select class="form-control" id="gender" required>
+                                            <option value="">Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="femail">Female</option>
+                                            <option value="others">Others</option>
                                     </select>
                                 </div>
                                 <div class="col-6">
@@ -94,8 +92,8 @@ $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-6">
-                                    <select class="form-control" id="country">
-                                            <option>Country</option>
+                                    <select class="form-control" id="country" required>
+                                            <option value="">Country</option>
                                             <option>2</option>
                                             <option>3</option>
                                             <option>4</option>
@@ -103,8 +101,8 @@ $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
                                     </select>
                                 </div>
                                 <div class="col-6">
-                                    <select class="form-control" id="city">
-                                            <option>City</option>
+                                    <select class="form-control" id="city" required>
+                                            <option value="">City</option>
                                             <option>2</option>
                                             <option>3</option>
                                             <option>4</option>
@@ -114,10 +112,13 @@ $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
                             </div>
                         </div>                      
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
                         </div>
                         <input name="csrf_token" id="csrf_token" value="<?= $_SESSION['csrf_token'] ?>" type="hidden">
-                        <div onclick="signup()" class="background-img signup_btn"></div>
+                        <div class="submit-container">
+                            <button type="submit" class="background-img signup_btn"></button>
+                            <p class="error-msg">aa</p>
+                        </div>
                     </form>
                     <p>By registering your interest, you agree to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>
                     <p>After verifying your email, you will be eligible for a 14-day free trial of premium membership upon account registration.</p>

@@ -90,11 +90,22 @@ p {
     background: linear-gradient(90deg, rgba(129, 88, 24, 0.9), rgba(57, 35, 0, 0.8));
     color: white; }
     .section.signup .signup-form {
-      width: 50%; }
-      .section.signup .signup-form .signup_btn {
-        cursor: pointer;
-        width: 150px;
-        height: 75px; }
+      width: 60%; }
+      .section.signup .signup-form .submit-container {
+        display: flex; }
+        .section.signup .signup-form .submit-container .signup_btn {
+          cursor: pointer;
+          width: 150px;
+          height: 75px;
+          background-color: transparent;
+          border: none; }
+          .section.signup .signup-form .submit-container .signup_btn:focus {
+            outline: none; }
+        .section.signup .signup-form .submit-container .error-msg {
+          color: white;
+          font-weight: bold;
+          width: 20%;
+          flex-grow: 1; }
 
 .bottom-info {
   font-size: 0.8rem;

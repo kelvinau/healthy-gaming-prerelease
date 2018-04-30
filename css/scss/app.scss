@@ -128,11 +128,25 @@ p {
         background: linear-gradient(90deg, rgba(129, 88, 24, 0.9), rgba(57, 35, 0, 0.8));
         color: white;
         .signup-form {
-            width: 50%;
-            .signup_btn {
-                cursor: pointer;
-                width: 150px;
-                height: 75px;
+            width: 60%;
+            .submit-container {
+                display: flex;
+                .signup_btn {
+                    cursor: pointer;
+                    width: 150px;
+                    height: 75px;
+                    background-color: transparent;
+                    border: none;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .error-msg {
+                    color: white;
+                    font-weight: bold;
+                    width: 20%;
+                    flex-grow: 1;
+                }
             }
         }
     }

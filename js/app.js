@@ -118,9 +118,25 @@ function getCurrentAnchor() {
 }
 
 function signup() {
-    var csrf_token = $('#csrf_token').val();
-    $.post('ajax.php', {csrf_token: csrf_token})
-    .then(function(res) {
-        console.log(res);
+    
+    $.post('ajax.php', {
+        csrf_token: $('#csrf_token').val(),
+        name: $('#name').val(),
+        birth_year: $('#birth_year').val(),
+        gender: $('#gender').val(),
+        gender_others: $('#gender_others').val(),
+        country: $('#country').val(),
+        city: $('#city').val(),
+        email: $('#email').val(),
     })
+    .then(function(res) {
+        var json = JSON.parse(res);
+        if (json.status === 1) {
+            $('.signup_btn').html('<p>' + json.msg + '</p>');
+        }
+        else {
+            $('.error-text').text(json.msg.join(', '));
+        }
+    })
+    return false;
 }
