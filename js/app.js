@@ -58,7 +58,6 @@ $(document).ready(function() {
         $('.alert-success').fadeIn(1000);
     }, 500);
 
-
     function onMouseEnter() {
         if (joystick_state === 0) {
             hideAllJ();
@@ -143,7 +142,8 @@ function signup() {
             $('.submit-container').html('<p>' + json.msg + '</p>');
         }
         else {
-            $('.error-msg').text(json.msg.join(', '));
+            var msg = $.isArray(json.msg) ? json.msg.join(', ') : json.msg;
+            $('.error-msg').text(msg);
         }
     })
     return false;
