@@ -52,12 +52,18 @@ p {
 }
 .background-img {
     background-size: 100% 100%;
-    &.top {
-        background-image: url(../image/top-background.jpg);
+    &.background-1 {
+        background-image: url(../image/background-1.jpg);
     }
-    &.bottom {
-        background-image: url(../image/bottom-background.jpg);
+    &.background-2 {
+        background-image: url(../image/background-2.jpg);
     }
+    &.background-3 {
+        background-image: url(../image/background-3.jpg);
+    }
+    &.background-4 {
+        background-image: url(../image/background-4.jpg);
+    }    
     &.founder-img {
         background-image: url(../image/founders.jpg);
     }
@@ -105,7 +111,7 @@ p {
         }
     }
     &.project {
-        background-color: rgba(0, 38, 39, 0.8);
+        //background-color: rgba(0, 38, 39, 0.8);
         color: white;
     }
     &.founder {
@@ -124,11 +130,11 @@ p {
         }
     }
     &.founder,&.faq {
-        background-color: rgba(255, 255, 255, 0.8);
+        //background-color: rgba(255, 255, 255, 0.8);
         color: black;
     }
     &.signup {
-        background: linear-gradient(90deg, rgba(129, 88, 24, 0.9), rgba(57, 35, 0, 0.8));
+        //background: linear-gradient(90deg, rgba(129, 88, 24, 0.9), rgba(57, 35, 0, 0.8));
         color: white;
         .signup-form {
             width: 60%;
@@ -161,6 +167,9 @@ p {
     }
     .name {
         //margin-bottom: 1rem;
+    }
+    .info {
+        font-size: 0.5rem;
     }
     text-align: center;
 }

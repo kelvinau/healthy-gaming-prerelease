@@ -1,4 +1,5 @@
 var MOVE_SECTION_TIME = 1000;
+
 $(document).ready(function() {
     // 0 - idle_1 - idle
     // 1 - idle_2 - mouse hover

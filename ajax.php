@@ -21,7 +21,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
             $email = $_POST['email'];
             $name = $_POST['name'];
             $birth_year = $_POST['birth_year'];
-            $gender = $_POST['gender'] !== 'others' ? $_POST['gender'] : $_POST['gender_others'];
+            $gender = $_POST['gender'];
             $country = $_POST['country'];
             $city = $_POST['city'];
 
@@ -87,7 +87,7 @@ function validateInput() {
     if (!isset($_POST['birth_year']) || !filter_var($_POST['birth_year'], FILTER_VALIDATE_INT)) {
         array_push($msg, 'Error on Birth Year');
     }
-    if (!isset($_POST['gender']) || !in_array($_POST['gender'], ['male', 'female', 'others'])) {
+    if (!isset($_POST['gender']) || !in_array($_POST['gender'], ['male', 'female', 'private'])) {
         array_push($msg, 'Error on Gender');
     }
     if (!isset($_POST['country']) || !strlen($_POST['country'])) {
