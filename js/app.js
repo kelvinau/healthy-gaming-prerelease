@@ -16,23 +16,38 @@ $(document).ready(function() {
     $down_2 = $('.down_2');
     var anchors = ['project', 'founder', 'signup', 'faq'];
     var timer;
+    var mouseDown = false;
 
     $('.joystick-container').hover(onMouseEnter, onMouseLeave);
     $('.joystick-container .top').mousedown(function() {
-        hideAllJ();
-        showJ($up_2);
-        joystick_state = 3;
-        
-        $.fn.fullpage.moveSectionUp();
-        timer = setInterval($.fn.fullpage.moveSectionUp, MOVE_SECTION_TIME);
+        mouseDown = true;
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+        if (mouseDown) {
+            hideAllJ();
+            showJ($up_2);
+            joystick_state = 3;
+            
+            $.fn.fullpage.moveSectionUp();
+            timer = setInterval($.fn.fullpage.moveSectionUp, MOVE_SECTION_TIME);
+        }
     }).mouseup(onMouseUp); 
     $('.joystick-container .bottom').mousedown(function() {
-        hideAllJ();
-        showJ($down_2);
-        joystick_state = 5;
-
-        $.fn.fullpage.moveSectionDown();
-        timer = setInterval($.fn.fullpage.moveSectionDown, MOVE_SECTION_TIME);
+        mouseDown = true;
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+        if (mouseDown) {
+            hideAllJ();
+            showJ($down_2);
+            joystick_state = 5;
+    
+            $.fn.fullpage.moveSectionDown();
+            timer = setInterval($.fn.fullpage.moveSectionDown, MOVE_SECTION_TIME);
+        }
     }).mouseup(onMouseUp); 
 
 
@@ -98,8 +113,11 @@ $(document).ready(function() {
     }
 
     function onMouseUp() {
-        clearInterval(timer);
-        timer = null;
+        mouseDown = false;
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
         hideAllJ();
         if (joystick_state === 0) {
             showJ($idle_1);
