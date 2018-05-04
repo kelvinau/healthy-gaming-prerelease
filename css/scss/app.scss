@@ -54,6 +54,7 @@ p {
     background-size: 100% 100%;
     &.background-1 {
         background-image: url(../image/background-1.jpg);
+        background-position-y: 60px;
     }
     &.background-2 {
         background-image: url(../image/background-2.jpg);
@@ -113,9 +114,8 @@ p {
         //background-color: rgba(0, 38, 39, 0.8);
         color: white;
         .content-wrapper {
-            height: 10rem;
             //padding-top: $navbar-height;
-            padding-top: 1.2rem;
+            padding: 30px 0;
         }
     }
     &.founder {
