@@ -96,8 +96,7 @@ p {
     }
 }
 .section {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 0 10%;
     h2 {
         margin-bottom: 1rem;
     }
@@ -113,25 +112,30 @@ p {
     &.project {
         //background-color: rgba(0, 38, 39, 0.8);
         color: white;
+        .content-wrapper {
+            height: 10rem;
+            //padding-top: $navbar-height;
+            padding-top: 1.2rem;
+        }
     }
     &.founder {
+        color: black;
         padding-left: 0;
         padding-right: 0;
         .fp-tableCell {
-            display: flex;
-            .founder-img {
-                width: 35%;
-            }
-            .founder-description {
-                padding-left: 5%;
-                padding-right: 5%;
-                width: 75%;
+            .content-wrapper {
+                display: flex;
+                .founder-img {
+                    //width: 35%;
+                    width: 350px;
+                    height: 466px;
+                }
+                .founder-description {
+                    padding: 5%;
+                    width: 75%;
+                }
             }
         }
-    }
-    &.founder,&.faq {
-        //background-color: rgba(255, 255, 255, 0.8);
-        color: black;
     }
     &.signup {
         //background: linear-gradient(90deg, rgba(129, 88, 24, 0.9), rgba(57, 35, 0, 0.8));
@@ -144,7 +148,7 @@ p {
                 .signup_btn {
                     cursor: pointer;
                     width: 150px;
-                    height: 75px;
+                    height: 62px;
                     background-color: transparent;
                     border: none;
                     &:focus {
@@ -158,6 +162,9 @@ p {
             }
         }
     }
+}
+.empty-spacing {
+    padding: 1rem;
 }
 .bottom-info {
     font-size: 0.8rem;

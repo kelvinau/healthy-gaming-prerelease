@@ -39,7 +39,7 @@ $(document).ready(function() {
 	$('#main').fullpage({
         menu: '#menu',
         anchors: anchors,
-        paddingTop: '66px', // same as navbar-height
+        paddingTop: '66px', // same as navbar-height + padding
         //paddingBottom: '2rem',
         onLeave: onSectionleave,
         afterLoad: afterSectionLoad,
@@ -123,6 +123,10 @@ function getCurrentAnchor() {
     var arr = window.location.href.split('/');
     var anchor = arr[arr.length - 1];
     return anchor[0] !== '#' ? '#project' : anchor;
+}
+
+function gotoTop() {
+    $.fn.fullpage.moveTo('project');
 }
 
 function signup() {

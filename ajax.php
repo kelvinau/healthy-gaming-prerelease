@@ -76,7 +76,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
         }
         
     }
-}
+}   
 
 function validateInput() {
     $msg = [];
