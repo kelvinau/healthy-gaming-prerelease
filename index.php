@@ -51,6 +51,15 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
     <head>
         <title>Healthy Gaming</title>
         <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
+
+        <!-- FOR IOS -->
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <META HTTP-EQUIV="Expires" CONTENT="-1">
+    
+    
+    
+    
+    
     </head>
     <body>
         <?php if ($verified) : ?>
@@ -87,28 +96,36 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         </nav>
 
         <div id="main">
-            <div class="section project background-img background-1 fp-auto-height" data-anchor="project">
+            <div class="section project background-img background-1" data-anchor="project">
                 <div class="content-wrapper">
                     <h2>About the Project</h2>
                     <p>Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming. The project will provide a platform to bring gamers together as a community, and various features will be introduced to motivate users and provide the knowledge needed in order to successfully achieve individual set goals.</p>
                 </div>
             </div>
-            <div class="section founder background-img background-2 fp-auto-height" data-anchor="founder">
-                <div class="content-wrapper">
+            <div class="section founder background-img background-2" data-anchor="founder">
+                <div class="content-wrapper row">
                     <!-- <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div> -->
-                    <img class="founder-img" src="image/founders.jpg"  title="Founders of Healthygaming Christoffer Johansson and Troy Liu" alt="Founders of Healthygaming Christoffer Johansson and Troy Liu">
-                    <div class="founder-description">
-                        <h2>About the Founders</h2>
-                        <h4>Christoffer Johansson</h4>
-                        <p>Christoffer Johansson is a social entrepreneur and traveller with a passion for gaming. After a family tragedy in 2010, Christoffer fell into depression and used video games as a temporary escape from reality. After a long fight he pulled himself out in 2014, and as of September 2015, Christoffer holds the most #1 leaderboard scores in a rhythm game called osu!.</p>
-                        <p>"What motivates me to start this project is the possibility of making a difference for gamers from all over the world. After dealing with an addiction to video games of my own, I believe I have the capability of using my past experience to the project's advantage, since this project is about helping others succeed in the same battle I once fought and won."</p>
-                        <h4>Troy Liu</h4>
-                        <p>Troy Liu is a graphical designer by day and a gamer by night. Through a co-operation with the Government of Canada and volunteer work at the Isa Mundo Foundation, Troy has been able to contribute to those less fortunate and see firsthand the difference he can make within marginalized communities.</p>
-                        <p>"I'm a simple man. I see a good opportunity, I take it. I have had my own share of gaming issues in the past and I believe Healthygaming has the ability to change lives for the better."</p>
+                    <div class="col-4">
+                        <div class="founder-img-container">
+                            <img class="founder-img" src="image/founders.jpg" 
+                            title="Founders of Healthygaming Christoffer Johansson and Troy Liu" 
+                            alt="Founders of Healthygaming Christoffer Johansson and Troy Liu">  
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="founder-description">
+                            <h2>About the Founders</h2>
+                            <h4>Christoffer Johansson</h4>
+                            <p>Christoffer Johansson is a social entrepreneur and traveller with a passion for gaming. After a family tragedy in 2010, Christoffer fell into depression and used video games as a temporary escape from reality. After a long fight he pulled himself out in 2014, and as of September 2015, Christoffer holds the most #1 leaderboard scores in a rhythm game called osu!.</p>
+                            <p>"What motivates me to start this project is the possibility of making a difference for gamers from all over the world. After dealing with an addiction to video games of my own, I believe I have the capability of using my past experience to the project's advantage, since this project is about helping others succeed in the same battle I once fought and won."</p>
+                            <h4>Troy Liu</h4>
+                            <p>Troy Liu is a graphical designer by day and a gamer by night. Through a co-operation with the Government of Canada and volunteer work at the Isa Mundo Foundation, Troy has been able to contribute to those less fortunate and see firsthand the difference he can make within marginalized communities.</p>
+                            <p>"I'm a simple man. I see a good opportunity, I take it. I have had my own share of gaming issues in the past and I believe Healthygaming has the ability to change lives for the better."</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="section signup background-img background-3 fp-auto-height" data-anchor="signup" onsubmit="return signup()">
+            <div class="section signup background-img background-3" data-anchor="signup" onsubmit="return signup()">
                 <div class="content-wrapper">
                 <h2>Signup</h2>
                     <p>If you're interested in joining, please tell us a little bit about yourself and register your interest below.</p>

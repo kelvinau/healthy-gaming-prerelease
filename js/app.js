@@ -54,10 +54,11 @@ $(document).ready(function() {
 	$('#main').fullpage({
         menu: '#menu',
         anchors: anchors,
-        paddingTop: '66px', // same as navbar-height + padding
+        paddingTop: screen.width > 992 ? '66px' : '100px', // same as navbar-height
         //paddingBottom: '2rem',
         onLeave: onSectionleave,
         afterLoad: afterSectionLoad,
+        responsiveWidth: 500,
         afterRender: function(e) {
             $('.navbar a.nav-link[href="' + getCurrentAnchor() +'"]').parent().addClass('active');
         },

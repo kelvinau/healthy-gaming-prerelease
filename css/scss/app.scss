@@ -1,3 +1,4 @@
+$navbar-height-mobile: 120px;
 $navbar-height: 66px;
 $joystick-width: 102px;
 $joystick-height: 100px;
@@ -8,9 +9,7 @@ $joystick-height: 100px;
 body *{
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
-p {
-    font-size: 0.8rem;
-}
+
 .navbar {
     background-color: rgb(0, 47, 61);
     padding-top: 0;
@@ -27,34 +26,44 @@ p {
         }
     }
     .logo {
-        width: 150px;
-        height: $navbar-height;
+        width: 273px;
+        height: $navbar-height-mobile;
     }
     .controller {
         width: 100%;
-        height: $navbar-height;
+        height: $navbar-height-mobile;
     }
     .nav-link {
         padding-top: 1.5rem;
     }
+    .navbar-toggler-icon {
+        width: 3em;
+        height: 3em;
+    }
 }
-// DON"T DO THIS LATER
-@media (min-width: 992px) {
-    .navbar .controller {
-        width: 150px;
+h2 {
+    font-size: 3em;
+}
+h4 {
+    font-size: 2em;
+}
+p {
+    font-size: 1.5em;
+}
+.bottom-info {
+    font-size: 1.2em;
+    .info {
+        font-size: 0.5em;
     }
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-    }
+}
+.navbar-nav {
+    font-size: 2em;
 }
 .background-img {
     background-size: 100% 100%;
     &.background-1 {
         background-image: url(../image/background-1.jpg);
-        background-position-y: 60px;
+        background-position-y: 120px;
     }
     &.background-2 {
         background-image: url(../image/background-2.jpg);
@@ -122,18 +131,21 @@ p {
         color: black;
         padding-left: 0;
         padding-right: 0;
-        .fp-tableCell {
-            .content-wrapper {
-                display: flex;
+        .content-wrapper {
+            // display: flex;
+            .founder-img-container {
                 .founder-img {
-                    //width: 35%;
                     width: 350px;
                     height: 466px;
+
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
-                .founder-description {
-                    padding: 5%;
-                    width: 75%;
-                }
+            }
+            .founder-description {
+                padding: 0 5%;
+                //width: 75%;
             }
         }
     }
@@ -167,7 +179,10 @@ p {
     padding: 1rem;
 }
 .bottom-info {
-    font-size: 0.8rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
     //margin-bottom: 1rem;
     .contact {
         //margin: 2rem 0;
@@ -175,16 +190,14 @@ p {
     .name {
         //margin-bottom: 1rem;
     }
-    .info {
-        font-size: 0.5rem;
-    }
     text-align: center;
 }
 
 .joystick-container {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: $joystick-width;
+    -webkit-backface-visibility: hidden;
     cursor: pointer;
     .half {
         position: absolute;
@@ -217,4 +230,47 @@ p {
     transform: translateX(-50%);
     background-color: rgba(212, 237, 218, 0.9);
     display: none;
+}
+
+// DON"T DO THIS LATER
+@media (min-width: 992px) {
+    .navbar-nav {
+        font-size: 1rem;
+    }
+    .navbar {
+        .logo {
+            width: 150px;
+            height: $navbar-height;
+        }
+        .controller {
+            height: $navbar-height;
+        }
+    }
+    .navbar .controller {
+        width: 150px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    .bottom-info {
+        font-size: 0.8rem;
+        .info {
+            font-size: 0.5rem;
+        }
+    }
+    .background-img.background-1 {
+        background-position-y: 60px;
+    }
 }
