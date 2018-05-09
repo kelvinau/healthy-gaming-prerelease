@@ -96,16 +96,8 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             </div>
             <div class="section founder background-img background-2" data-anchor="founder">
                 <div class="content-wrapper row">
-                    <!-- <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div> -->
-                    <div class="background-img founder-img"></div>
-                    <div class="col-4">
-                        
-                        <!-- <div class="founder-img-container">
-                            <img class="founder-img" src="image/founders.jpg" 
-                            title="Founders of Healthygaming Christoffer Johansson and Troy Liu" 
-                            alt="Founders of Healthygaming Christoffer Johansson and Troy Liu">  
-                        </div> -->
-                    </div>
+                    <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div>
+                    <div class="col-4"></div>
                     <div class="col-8">
                         <div class="founder-description">
                             <h2>About the Founders</h2>
