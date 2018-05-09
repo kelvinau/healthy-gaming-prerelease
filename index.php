@@ -97,12 +97,14 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             <div class="section founder background-img background-2" data-anchor="founder">
                 <div class="content-wrapper row">
                     <!-- <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div> -->
+                    <div class="background-img founder-img"></div>
                     <div class="col-4">
-                        <div class="founder-img-container">
+                        
+                        <!-- <div class="founder-img-container">
                             <img class="founder-img" src="image/founders.jpg" 
                             title="Founders of Healthygaming Christoffer Johansson and Troy Liu" 
                             alt="Founders of Healthygaming Christoffer Johansson and Troy Liu">  
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-8">
                         <div class="founder-description">
@@ -242,9 +244,6 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
         else window.addEventListener('load', loadDeferredStyles);
         </script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
         <script defer src="js/app.min.js"></script>
     </body>
 </html>
