@@ -60,11 +60,9 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                         Warm Regards,
                         Healthy Gaming
                     ";
-
-                    $headers  = "From: contact@healthygaming.info\r\n" .
-                    "X-Mailer: php\r\n";
-                    $headers .= "MIME-Version: 1.0\r\n";
-                    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+                    
+                    //$headers = "From: Healthy Gaming <contact@healthygaming.info> \r\n";
+                    $headers = "Reply-to: contact@healthygaming.info\r\n";
                     $headers .= "Bcc: contact@healthygaming.info\r\n";
 
                     // Send email
