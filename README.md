@@ -22,3 +22,9 @@ Healthygaming is a social enterprise project that aims to help gamers find a goo
 **Q: I'd like to contribute; Is there anything I can do?**
 
 *A: The project is currently in development. When it releases, opportunities will become available for you to help out in the community in various ways. At the moment, simply showing your interest by signing up and spreading the word are the best ways to assist us in pushing this project forward.*
+
+### To Build
+css  
+`scss --sourcemap=none --style compressed --watch scss/app.scss:app.min.css`  
+js  
+`uglifyjs lib/jquery-3.3.1.min.js lib/bootstrap.min.js lib/jquery.fullpage.min.js app.js --compress -o app.min.js`
