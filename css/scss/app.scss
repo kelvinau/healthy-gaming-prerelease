@@ -2,6 +2,8 @@ $navbar-height-mobile: 120px;
 $navbar-height: 66px;
 $joystick-width: 10rem;
 $joystick-height: 10rem;
+$founder-img-width-mobile: 330px;
+$founder-img-width: 400px;
 
 @import "bootstrap.min.css";
 @import "jquery.fullpage.min.css";
@@ -26,19 +28,23 @@ body *{
         }
     }
     .logo {
-        width: 273px;
         height: $navbar-height-mobile;
+        width: #{320/(100/$navbar-height-mobile)};
     }
     .controller {
-        width: 100%;
         height: $navbar-height-mobile;
+        width: #{457/(390/$navbar-height-mobile)};
+        margin: 0 auto;
     }
     .nav-link {
         padding-top: 1.5rem;
     }
-    .navbar-toggler-icon {
-        width: 3em;
-        height: 3em;
+    .navbar-toggler {
+        margin-right: 1rem;
+        .navbar-toggler-icon {
+            width: 3em;
+            height: 3em;
+        }
     }
 }
 h2 {
@@ -49,6 +55,7 @@ h4 {
 }
 p {
     font-size: 1.5em;
+    text-align: justify;
 }
 .bottom-info {
     font-size: 1.2em;
@@ -85,6 +92,11 @@ p {
     }    
     &.founder-img {
         background-image: url(../image/founders.jpg);
+        position: absolute;      
+        width: $founder-img-width-mobile;
+        height: #{2708/(2031/$founder-img-width-mobile)};
+        top: calc(50% - #{2708/(2031/$founder-img-width-mobile)/2});
+        left: calc(#{(200/12)}% - #{$founder-img-width-mobile/2});
     }
     &.logo {
         background-image: url(../image/logo.png);
@@ -135,6 +147,7 @@ p {
             //padding-top: $navbar-height;
             padding: 30px 0;
         }
+        z-index: 5;
     }
     &.founder {
         color: black;
@@ -180,6 +193,15 @@ p {
                     width: 20%;
                     flex-grow: 1;
                 }
+            }
+        }
+        z-index: 5;
+    }
+    &.faq {
+        .fp-tableCell {
+            vertical-align: top;
+            .content-wrapper {
+                padding-top: 15px;
             }
         }
     }
@@ -241,12 +263,12 @@ p {
     }
     .navbar {
         .logo {
-            width: 176px;
             height: $navbar-height - 11;
+            width: #{320/(100/($navbar-height - 11))};
         }
         .controller {
-            width: 64.45px;
             height: $navbar-height - 11;
+            width: #{457/(390/($navbar-height - 11))};
         }
     }
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -256,13 +278,21 @@ p {
         margin-right: 0.5rem;
     }
     h2 {
-        font-size: 2rem;
+        //font-size: 2rem;
+        font-size: 3rem;
     }
     h4 {
         font-size: 1.5rem;
     }
     p {
-        font-size: 0.8rem;
+        //font-size: 0.8rem;
+        font-size: 1.2rem;
+    }
+    .project p {
+        font-size: 1.5rem;
+    }
+    .faq p {
+        font-size: 1.2rem;
     }
     .bottom-info {
         font-size: 0.8rem;
@@ -272,5 +302,11 @@ p {
     }
     .background-img.background-1 {
         background-position-y: 56px;
+    }
+    .background-img.founder-img {
+        width: $founder-img-width;
+        height: #{2708/(2031/$founder-img-width)};
+        top: calc(50% - #{2708/(2031/$founder-img-width)/2});
+        left: calc(#{(200/12)}% - #{$founder-img-width/2});
     }
 }
