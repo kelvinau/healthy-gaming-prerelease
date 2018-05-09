@@ -171,6 +171,7 @@ function gotoTop() {
 function signup() {
     if (!signUpClicked) {
         signUpClicked = true;
+        $('.error-msg').text('Submitting...');
         $.post('ajax.php', {
             csrf_token: $('#csrf_token').val(),
             name: $('#name').val(),
