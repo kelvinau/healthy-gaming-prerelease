@@ -81,7 +81,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         <a class="nav-link" href="#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link background-img controller" href="#signup" title="Sign Up Tab"></a>
+                        <a class="nav-link background-img controller" href="#signup" title="Sign Up"></a>
                     </li>
                 </ul>
             </div>
@@ -135,7 +135,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                                 <div class="col-6">
                                     <select class="form-control" id="birth_year" required>
                                         <option value="">Year of Birth</option>
-                                        <?php foreach (range(1900, 2013) as $year):?>
+                                        <?php foreach (range(date('Y') - 10, 1900) as $year):?>
                                             <option value="<?= $year ?>"><?= $year ?></option>
                                         <?php endforeach ?>
                                     </select>
@@ -163,7 +163,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         </div>
                         <input name="csrf_token" id="csrf_token" value="<?= $_SESSION['csrf_token'] ?>" type="hidden">
                         <div class="submit-container">
-                            <button type="submit" class="background-img signup_btn" title="Sign Up Button"></button>
+                            <button type="submit" class="background-img signup_btn" title="Sign Up"></button>
                             <p class="error-msg"></p>
                         </div>
                     </form>
