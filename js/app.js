@@ -8,11 +8,11 @@ $(document).ready(function() {
     // 4 - down_1 - wheel down
     // 5 - down_2 - click and hold bottom half
     var joystick_state = 0;
-    $idle_1 = $('.idle_1');
+    //$idle_1 = $('.idle_1');
     $idle_2 = $('.idle_2');
-    $up_1 = $('.up_1');
+    //$up_1 = $('.up_1');
     $up_2 = $('.up_2');
-    $down_1 = $('.down_1');
+    //$down_1 = $('.down_1');
     $down_2 = $('.down_2');
     var anchors = ['project', 'founder', 'signup', 'faq'];
     var timer;
@@ -86,7 +86,7 @@ $(document).ready(function() {
     function onMouseLeave() {
         //if (joystick_state === 1) {
             hideAllJ();
-            showJ($idle_1);
+            showJ($idle_2);
             joystick_state = 0;
         //}
     }
@@ -97,10 +97,10 @@ $(document).ready(function() {
         if (joystick_state !== 3 && joystick_state !== 5) {
             hideAllJ();
             if (direction === 'up') {
-                showJ($up_1);
+                showJ($up_2);
             }
             else if (direction === 'down') {
-                showJ($down_1);
+                showJ($down_2);
             }
         }
     }
@@ -108,7 +108,7 @@ $(document).ready(function() {
     function afterSectionLoad() {
         if (joystick_state !== 3 && joystick_state !== 5) {
             hideAllJ();
-            showJ($idle_1);
+            showJ($idle_2);
             joystick_state = 0;
         }
     }
@@ -120,12 +120,7 @@ $(document).ready(function() {
             timer = null;
         }
         hideAllJ();
-        if (joystick_state === 0) {
-            showJ($idle_1);
-        }
-        else {
-            showJ($idle_2);
-        }
+        showJ($idle_2);
     }
 
     function hideAllJ() {

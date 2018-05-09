@@ -61,18 +61,27 @@ p {
 }
 .background-img {
     background-size: 100% 100%;
+    background-repeat: no-repeat;
     &.background-1 {
         background-image: url(../image/background-1.jpg);
         background-position-y: 120px;
+        background-color: rgb(0, 38, 39);
+        background-size: cover;
     }
     &.background-2 {
         background-image: url(../image/background-2.jpg);
+        background-color: rgb(255, 255, 255);
+        background-size: cover;
     }
     &.background-3 {
         background-image: url(../image/background-3.jpg);
+        background-color: linear-gradient(rgba(57, 35, 0, 0.9), rgba(129, 88, 24, 0.9));
+        background-size: cover;
     }
     &.background-4 {
         background-image: url(../image/background-4.jpg);
+        background-color: rgb(255, 255, 255);
+        background-size: cover;
     }    
     &.founder-img {
         background-image: url(../image/founders.jpg);
@@ -81,7 +90,7 @@ p {
         background-image: url(../image/logo.png);
     }
     &.controller {
-        background-image: url(../image/controller.svg);
+        background-image: url(../image/controller.png);
     }
     &.signup_btn {
         background-image: url(../image/signup_btn.png);
@@ -206,7 +215,7 @@ p {
         height: $joystick-width;
         position: absolute;
         bottom: 0;
-        &:not(.idle_1) {
+        &:not(.idle_2) {
             //display: none;
             visibility: hidden;
         }
@@ -232,15 +241,13 @@ p {
     }
     .navbar {
         .logo {
-            width: 150px;
-            height: $navbar-height;
+            width: 176px;
+            height: $navbar-height - 11;
         }
         .controller {
-            height: $navbar-height;
+            width: 64.45px;
+            height: $navbar-height - 11;
         }
-    }
-    .navbar .controller {
-        width: 150px;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-left: 0;
@@ -264,6 +271,6 @@ p {
         }
     }
     .background-img.background-1 {
-        background-position-y: 60px;
+        background-position-y: 56px;
     }
 }

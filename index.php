@@ -52,14 +52,6 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         <title>Healthy Gaming</title>
         <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
         <link rel="shortcut icon" href="image/favicon.ico" />
-        <!-- FOR IOS -->
-        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-        <META HTTP-EQUIV="Expires" CONTENT="-1">
-    
-    
-    
-    
-    
     </head>
     <body>
         <?php if ($verified) : ?>
@@ -225,11 +217,11 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             </div>
         </div>
         <div class="joystick-container">
-            <div class="background-img idle_1" title="Joystick Idle"></div>
+            <!-- <div class="background-img idle_1" title="Joystick Idle"></div> -->
             <div class="background-img idle_2" title="Joystick Idle"></div>
-            <div class="background-img up_1" title="Joystick Up"></div>
+            <!-- <div class="background-img up_1" title="Joystick Up"></div> -->
             <div class="background-img up_2" title="Joystick Up"></div>
-            <div class="background-img down_1" title="Joystick Down"></div>
+            <!-- <div class="background-img down_1" title="Joystick Down"></div> -->
             <div class="background-img down_2" title="Joystick Down"></div>
             <div class="half top"></div>
             <div class="half bottom"></div>
