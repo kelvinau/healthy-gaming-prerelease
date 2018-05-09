@@ -51,7 +51,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
     <head>
         <title>Healthy Gaming</title>
         <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
-
+        <link rel="shortcut icon" href="image/favicon.ico" />
         <!-- FOR IOS -->
         <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
         <META HTTP-EQUIV="Expires" CONTENT="-1">
