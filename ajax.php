@@ -23,7 +23,6 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
             $birth_year = $_POST['birth_year'];
             $gender = $_POST['gender'];
             $country = $_POST['country'];
-            $city = $_POST['city'];
 
             $stmt = $conn->prepare("SELECT email FROM {$TABLE} WHERE email=?");
             $stmt->bind_param("s", $email);
@@ -42,10 +41,10 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                 } while($result->num_rows > 0);
     
                 $stmt = $conn->prepare("
-                INSERT INTO {$TABLE} (email, name, birth_year, gender, country, city, hash) 
-                VALUES (?, ?, ?, ?, ?, ?, '{$hash}')
+                INSERT INTO {$TABLE} (email, name, birth_year, gender, country, hash) 
+                VALUES (?, ?, ?, ?, ?, '{$hash}')
                 ");
-                $stmt->bind_param("ssisss", $email, $name, $birth_year, $gender, $country, $city);
+                $stmt->bind_param("ssiss", $email, $name, $birth_year, $gender, $country);
                 
                 if ($result = $stmt->execute()) {
                     echo json_encode(["status" => 1, "msg" => "Information submitted"]);
@@ -59,11 +58,17 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                         and verify your email, you will be eligible for a 14-day free trial of premium membership.
 
                         Warm Regards,
-                        Healty Gaming
+                        Healthy Gaming
                     ";
 
+                    $headers  = "From: contact@healthygaming.info\r\n" .
+                    "X-Mailer: php\r\n";
+                    $headers .= "MIME-Version: 1.0\r\n";
+                    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+                    $headers .= "Bcc: contact@healthygaming.info\r\n";
+
                     // Send email
-                    mail($email, "Thank you for your registration on HealthyGaming.info", $email_msg);
+                    mail($email, "Thank you for your registration on HealthyGaming.info", $email_msg, $headers);
                 }  
                 else {
                     //echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
@@ -92,9 +97,6 @@ function validateInput() {
     }
     if (!isset($_POST['country']) || !strlen($_POST['country'])) {
         array_push($msg, 'Error on Country');
-    }
-    if (!isset($_POST['city']) || !strlen($_POST['city'])) {
-        array_push($msg, 'Error on City');
     }
     if (!isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         array_push($msg, 'Error on Email');

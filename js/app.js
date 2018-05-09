@@ -1,4 +1,5 @@
 var MOVE_SECTION_TIME = 1000;
+var signUpClicked = false;
 
 $(document).ready(function() {
     // 0 - idle_1 - idle
@@ -168,26 +169,31 @@ function gotoTop() {
 }
 
 function signup() {
-    
-    $.post('ajax.php', {
-        csrf_token: $('#csrf_token').val(),
-        name: $('#name').val(),
-        birth_year: $('#birth_year').val(),
-        gender: $('#gender').val(),
-        gender_others: $('#gender_others').val(),
-        country: $('#country').val(),
-        city: $('#city').val(),
-        email: $('#email').val(),
-    })
-    .then(function(res) {
-        var json = JSON.parse(res);
-        if (json.status === 1) {
-            $('.submit-container').html('<p>' + json.msg + '</p>');
-        }
-        else {
-            var msg = $.isArray(json.msg) ? json.msg.join(', ') : json.msg;
-            $('.error-msg').text(msg);
-        }
-    })
+    if (!signUpClicked) {
+        signUpClicked = true;
+        $.post('ajax.php', {
+            csrf_token: $('#csrf_token').val(),
+            name: $('#name').val(),
+            birth_year: $('#birth_year').val(),
+            gender: $('#gender').val(),
+            gender_others: $('#gender_others').val(),
+            country: $('#country').val(),
+            city: $('#city').val(),
+            email: $('#email').val(),
+        })
+        .then(function(res) {
+            var json = JSON.parse(res);
+            if (json.status === 1) {
+                $('.submit-container').html('<p>' + json.msg + '</p>');
+            }
+            else {
+                var msg = $.isArray(json.msg) ? json.msg.join(', ') : json.msg;
+                $('.error-msg').text(msg);
+                signUpClicked = false;
+            }
+        }, function() {
+            signUpClicked = false;
+        })
+    }
     return false;
 }
