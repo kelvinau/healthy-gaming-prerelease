@@ -17,44 +17,42 @@ $(document).ready(function() {
     var anchors = ['project', 'founder', 'signup', 'faq'];
     var timer;
     var mouseDown = false;
+    var clickHandled = false;
 
     $('.joystick-container').hover(onMouseEnter, onMouseLeave);
-    $('.joystick-container .top').mousedown(function() {
-        mouseDown = true;
-        if (timer) {
-            clearInterval(timer);
-            timer = null;
-        }
-        if (mouseDown) {
-            hideAllJ();
-            showJ($up_2);
-            joystick_state = 3;
-            
-            $.fn.fullpage.moveSectionUp();
-            timer = setInterval($.fn.fullpage.moveSectionUp, MOVE_SECTION_TIME);
-        }
-    }).mouseup(onMouseUp); 
-    $('.joystick-container .bottom').mousedown(function() {
-        mouseDown = true;
-        if (timer) {
-            clearInterval(timer);
-            timer = null;
-        }
-        if (mouseDown) {
-            hideAllJ();
-            showJ($down_2);
-            joystick_state = 5;
-    
-            $.fn.fullpage.moveSectionDown();
-            timer = setInterval($.fn.fullpage.moveSectionDown, MOVE_SECTION_TIME);
-        }
-    }).mouseup(onMouseUp); 
+    $('.joystick-container .top').on('touchstart mousedown', function(e) {
+        e.stopImmediatePropagation();
 
+        if(e.type == "touchstart") {
+            clickHandled = true;
+            onMouseDown(true);
+        }
+        else if(e.type == "mousedown" && !clickHandled) {
+            onMouseDown(true);
+        }
+        else {
+            clickHandled = false;
+        }
+    }).on('touchend mouseup', onMouseUp); 
+    $('.joystick-container .bottom').on('touchstart mousedown', function(e) {
+        e.stopImmediatePropagation();
+
+        if(e.type == "touchstart") {
+            clickHandled = true;
+            onMouseDown();
+        }
+        else if(e.type == "mousedown" && !clickHandled) {
+            onMouseDown();
+        }
+        else {
+            clickHandled = false;
+        }
+    }).on('touchend mouseup', onMouseUp); 
 
 	$('#main').fullpage({
         menu: '#menu',
         anchors: anchors,
-        paddingTop: screen.width > 992 ? '66px' : '100px', // same as navbar-height
+        paddingTop: screen.width > 992 ? '66px' : '120px', // same as navbar-height
         //paddingBottom: '2rem',
         onLeave: onSectionleave,
         afterLoad: afterSectionLoad,
@@ -89,6 +87,32 @@ $(document).ready(function() {
             showJ($idle_2);
             joystick_state = 0;
         //}
+    }
+
+    function onMouseDown(isTop) {
+        mouseDown = true;
+        if (timer) {
+            clickHandled = false;
+            clearInterval(timer);
+            timer = null;
+        }
+        if (mouseDown) {
+            hideAllJ();
+            if (isTop) {
+                showJ($up_2);
+                joystick_state = 3;
+                
+                $.fn.fullpage.moveSectionUp();
+                timer = setInterval($.fn.fullpage.moveSectionUp, MOVE_SECTION_TIME);
+            }
+            else {
+                showJ($down_2);
+                joystick_state = 5;
+        
+                $.fn.fullpage.moveSectionDown();
+                timer = setInterval($.fn.fullpage.moveSectionDown, MOVE_SECTION_TIME);
+            }
+        }
     }
 
     function onSectionleave(index, nextIndex, direction) {
