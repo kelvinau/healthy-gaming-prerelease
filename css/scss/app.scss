@@ -267,6 +267,10 @@ p {
         color: white;
     }
 }
+.modal-body {
+    height: 60vh;
+    overflow: auto;
+}
 .modal-footer {
     button {
         background-color: #002f3d;

@@ -211,13 +211,14 @@ function showModal(type, event, msgObj) {
     if (type === 'disclaimer') {
         event.preventDefault();
         title = 'Disclaimer';
-        body = 'aa';
+        $('#modalBody .disclaimer').show();
     }
     else {
         title = msgObj.title;
         body = msgObj.body;
+        $('#modalBody .placeholder').text(body);
+        $('#modalBody .disclaimer').hide()
     }
     $('#modalTitle').text(title);
-    $('#modalBody').text(body);
     $('#modal').modal();
 }
