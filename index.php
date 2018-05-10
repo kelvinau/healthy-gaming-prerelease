@@ -47,13 +47,23 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 ,"Yemen","Zambia","Zimbabwe"];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117998010-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117998010-3');
+        </script>
         <title>Healthy Gaming</title>
         <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
         <link rel="shortcut icon" href="image/favicon.ico" />
     </head>
     <body>
+        <h1 style="display: none;">Healthy Gaming</h1>
         <?php if ($verified) : ?>
         <div class="alert alert-success alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -63,8 +73,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
             <a class="navbar-brand background-img logo" href="#" title="Healthy Gaming" onclick="gotoTop()"></a>
             <button class="navbar-toggler" type="button" 
-            data-toggle="collapse" data-target="#navbarToggler" 
-            aria-controls="navbarTogglerDemo" aria-expanded="false" aria-label="Toggle navigation">
+            data-toggle="collapse" data-target="#navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -226,7 +235,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             <div class="half bottom"></div>
         </div>
         <!-- GDPR Modal -->
-        <div class="modal fade" id="gdprModal" tabindex="-1" role="dialog" aria-labelledby="gdprModalLabel" aria-hidden="true">
+        <div class="modal fade" id="gdprModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
