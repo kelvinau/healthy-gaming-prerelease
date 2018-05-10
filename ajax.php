@@ -47,28 +47,39 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                 $stmt->bind_param("ssiss", $email, $name, $birth_year, $gender, $country);
                 
                 if ($result = $stmt->execute()) {
-                    echo json_encode(["status" => 1, "msg" => "
-                    Thank you for registering your interest. To complete the registration, please check your inbox and verify your email address.
-                    "]);
+                    echo json_encode(["status" => 1, "msg" => 
+                    "Thank you for registering your interest. To complete the registration, please check your inbox and verify your email address."]);
                     unset($_SESSION['csrf_token']);
     
                     $email_msg = "
-                        Dear {$name},
+                        <div style='text-align:center;'>
+                            <img src='https://healthygaming.info/image/logo.png'>
+                        </div>
+                        Dear {$name},<br><br>
 
-                        Thank you for registering on HealthyGaming.info. If you go to the link here 
-                        https://healthygaming.info/?hash={$hash}
-                        and verify your email, you will be eligible for a 14-day free trial of premium membership.
+                        Thank you for registering on HealthyGaming.info. Please <a href='https://healthygaming.info/?hash={$hash}'>click here</a> 
+                        to verify your email address.<br><br>
+                        
+                        Once your email has been verified, you will become eligible for a 14-day free trial of Premium Membership upon release.<br><br>
 
-                        Warm Regards,
-                        Healthy Gaming
+                        Warm Regards,<br>
+                        Healthygaming<br><br><br><br>
+
+                        <div style='text-align: center;'>
+                            <div>Healthygaming<sup>TM</sup></div>
+                            <div>Registered in Sweden.</div>
+                            <div>Registration No. 2018/02709.</div>
+                        </div>
                     ";
                     
                     //$headers = "From: Healthy Gaming <contact@healthygaming.info> \r\n";
                     $headers = "Reply-to: contact@healthygaming.info\r\n";
                     $headers .= "Bcc: contact@healthygaming.info\r\n";
+                    $headers .= "MIME-Version: 1.0\r\n";
+                    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
                     // Send email
-                    mail($email, "Thank you for your registration on HealthyGaming.info", $email_msg, $headers);
+                    mail($email, "Verification", $email_msg, $headers);
                 }  
                 else {
                     //echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
