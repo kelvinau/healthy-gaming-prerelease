@@ -185,13 +185,21 @@ function signup() {
         .then(function(res) {
             var json = JSON.parse(res);
             if (json.status === 1) {
-                $('.submit-container').html('<p>' + json.msg + '</p>');
+                showModal('registration', null, {
+                    title: 'Successful',
+                    body: json.msg,
+                })
+                $('#signUp-btn').prop('disabled', true);
             }
             else {
                 var msg = $.isArray(json.msg) ? json.msg.join(', ') : json.msg;
-                $('.error-msg').text(msg);
+                showModal('registration', null, {
+                    title: 'Failed',
+                    body: msg,
+                })
                 signUpClicked = false;
             }
+            $('.error-msg').text('');
         }, function() {
             signUpClicked = false;
         })
@@ -199,6 +207,17 @@ function signup() {
     return false;
 }
 
-function showGDPR() {
-    $('#gdprModal').modal();
+function showModal(type, event, msgObj) {
+    if (type === 'disclaimer') {
+        event.preventDefault();
+        title = 'Disclaimer';
+        body = 'aa';
+    }
+    else {
+        title = msgObj.title;
+        body = msgObj.body;
+    }
+    $('#modalTitle').text(title);
+    $('#modalBody').text(body);
+    $('#modal').modal();
 }

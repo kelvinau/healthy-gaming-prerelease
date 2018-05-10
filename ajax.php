@@ -31,7 +31,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
             $stmt->store_result();    
                   
             if ($stmt->num_rows > 0) {
-                echo json_encode(["status" => 0, "msg" => "Email Existed"]);
+                echo json_encode(["status" => 0, "msg" => "This email already exists."]);
             }
             else {
                 do {
@@ -47,7 +47,9 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                 $stmt->bind_param("ssiss", $email, $name, $birth_year, $gender, $country);
                 
                 if ($result = $stmt->execute()) {
-                    echo json_encode(["status" => 1, "msg" => "Information submitted"]);
+                    echo json_encode(["status" => 1, "msg" => "
+                    Thank you for registering your interest. To complete the registration, please check your inbox and verify your email address.
+                    "]);
                     unset($_SESSION['csrf_token']);
     
                     $email_msg = "

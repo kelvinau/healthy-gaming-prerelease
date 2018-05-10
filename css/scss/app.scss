@@ -188,6 +188,9 @@ p {
                     &:focus {
                         outline: none;
                     }
+                    &[disabled] {
+                        cursor: not-allowed;
+                    }
                 }
                 .error-msg {
                     width: 20%;
@@ -202,10 +205,6 @@ p {
             vertical-align: top;
             .content-wrapper {
                 padding-top: 15px;
-                .disclaimer {
-                    padding-right: 0;
-                    text-align: right;
-                }
             }
         }
     }
