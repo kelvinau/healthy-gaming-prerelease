@@ -6,7 +6,7 @@ $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
 
 $verified = false;
 if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
-    require_once(".login-info");
+    require_once("../../login_info/pr.php");
     $conn = new mysqli($SERVER, $USER, $PW, $DB);
 
     if ($conn->connect_errno) {
@@ -164,11 +164,13 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         </div>
                         <input name="csrf_token" id="csrf_token" value="<?= $_SESSION['csrf_token'] ?>" type="hidden">
                         <div class="submit-container">
-                            <button type="submit" class="background-img signup_btn" title="Sign Up"></button>
+                            <button type="submit" class="background-img signup_btn" title="Sign Up" id="signUp-btn"></button>
                             <p class="error-msg"></p>
                         </div>
                     </form>
-                    <p>By registering your interest, you agree to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>
+                    <p>By registering your interest, you agree our 
+                        <a href="#" onclick="showModal('disclaimer', event)">disclaimer</a>
+                    and to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>
                     <p>After verifying your email, you will be eligible for a 14-day free trial of premium membership upon account registration.</p>
                     <p><small>*This is not your username on our platform, it is how you wish to be referred to when we contact you.</small></p>
                 </div>
@@ -176,10 +178,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             <div class="section faq background-img background-4" data-anchor="faq">
                 <div class="content-wrapper">
                     <div class="row">
-                        <div class="col-6"><h2>FAQ</h2></div>
-                        <div class="col-6 disclaimer">
-                            <button type="button" class="btn btn-link" onclick="showGDPR()"><b>GDPR Disclaimer</b></button>
-                        </div>
+                        FAQ
                     </div>
                     <div class="question-container">
                         <p class="question">Q: When will this project be launched?</p>
@@ -234,19 +233,17 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             <div class="half top"></div>
             <div class="half bottom"></div>
         </div>
-        <!-- GDPR Modal -->
-        <div class="modal fade" id="gdprModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Modal -->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title"><b>GDPR Disclaimer</b></h5>
+                        <h5 class="modal-title"><b id="modalTitle"></b></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        Disclaimer
-                    </div>
+                    <div class="modal-body" id="modalBody"></div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
