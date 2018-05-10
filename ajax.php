@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
-    require_once(".login-info");
+    require_once("../../login_info/pr.php");
 
     $conn = new mysqli($SERVER, $USER, $PW, $DB);
     if ($conn->connect_errno) {
