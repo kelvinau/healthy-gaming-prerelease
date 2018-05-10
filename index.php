@@ -67,7 +67,10 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         <?php if ($verified) : ?>
         <div class="alert alert-success alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Your Email is verified</strong>
+            <strong>
+                Thank you for your time and interest.<br>
+                Your Email is now verified, and your registration is complete. <br>
+                For further questions, don’t hesitate to contact us. </strong>
         </div>
         <?php endif ?>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
