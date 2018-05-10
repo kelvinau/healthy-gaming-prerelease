@@ -202,6 +202,10 @@ p {
             vertical-align: top;
             .content-wrapper {
                 padding-top: 15px;
+                .disclaimer {
+                    padding-right: 0;
+                    text-align: right;
+                }
             }
         }
     }
@@ -255,7 +259,23 @@ p {
     background-color: rgba(212, 237, 218, 0.9);
     display: none;
 }
-
+.modal-header {
+    background-color: #002f3d;
+    color: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    button, button:hover {
+        color: white;
+    }
+}
+.modal-footer {
+    button {
+        background-color: #002f3d;
+        &:hover {
+            background-color: #000d10;
+        }
+    }
+}
 // DON"T DO THIS LATER
 @media (min-width: 992px) {
     .navbar-nav {

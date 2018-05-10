@@ -166,7 +166,12 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             </div>
             <div class="section faq background-img background-4" data-anchor="faq">
                 <div class="content-wrapper">
-                    <h2>FAQ</h2>
+                    <div class="row">
+                        <div class="col-6"><h2>FAQ</h2></div>
+                        <div class="col-6 disclaimer">
+                            <button type="button" class="btn btn-link" onclick="showGDPR()"><b>GDPR Disclaimer</b></button>
+                        </div>
+                    </div>
                     <div class="question-container">
                         <p class="question">Q: When will this project be launched?</p>
                         <p class="anwser">
@@ -219,6 +224,25 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             <div class="background-img down_2" title="Joystick Down"></div>
             <div class="half top"></div>
             <div class="half bottom"></div>
+        </div>
+        <!-- GDPR Modal -->
+        <div class="modal fade" id="gdprModal" tabindex="-1" role="dialog" aria-labelledby="gdprModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><b>GDPR Disclaimer</b></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Disclaimer
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <noscript id="deferred-styles">
            <link href="css/app.min.css" rel="stylesheet">

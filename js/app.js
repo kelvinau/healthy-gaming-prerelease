@@ -198,3 +198,7 @@ function signup() {
     }
     return false;
 }
+
+function showGDPR() {
+    $('#gdprModal').modal();
+}
