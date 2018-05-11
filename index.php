@@ -171,7 +171,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             <p class="error-msg"></p>
                         </div>
                     </form>
-                    <p>By registering your interest, you agree our 
+                    <p>By registering your interest, you agree to our 
                         <a href="#" onclick="showModal('disclaimer', event)">disclaimer</a>
                     and to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>
                     <p>After verifying your email, you will be eligible for a 14-day free trial of premium membership upon account registration.</p>
@@ -251,7 +251,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             Healthygaming<sup>TM</sup> provides the [https://healthygaming.info] website as a service to the public and website owners.<br>
                             By reading this, you acknowledge that you are only allowed to register information about yourself and give us the consent to 
                             process your registration with our Social Enterprise.<br>
-                            The information provided when signing up, which is stored by Healthygamin<sup>TM</sup> 
+                            The information provided when signing up, which is stored by Healthygaming<sup>TM</sup> 
                             is protected according to the EU General Data Protection Regulation (2016/679) and will not be shared with any third party.<br> 
                             This data will only be used for the purpose of learning more about our target audience, 
                             which allows us to tailor-make the website and find partners that benefits those signing up in multiple ways.<br>
@@ -264,7 +264,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             We will not delete any data that is stored during the pre-release unless an SAR (Subject Access Request) is sent to 
                             <a href="mailto:contact@healthygaming.info">contact@healthygaming.info</a> where we are requested to do so.<br></br>
                             When signing up, you agree to this disclaimer and acknowledge that you have read all the information. 
-                            You also accept that Healthygamin<sup>TM</sup> is not responsible for, and expressly disclaims all liability for damages of any kind arising out of use, 
+                            You also accept that Healthygaming<sup>TM</sup> is not responsible for, and expressly disclaims all liability for damages of any kind arising out of use, 
                             reference to, or reliance on any information contained within the site. 
                             While the information contained within the site is encrypted and periodically updated, 
                             no guarantee is given that the encrypted personal information is correct, complete, and up-to-date. 

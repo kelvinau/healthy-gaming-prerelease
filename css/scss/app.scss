@@ -268,7 +268,7 @@ p {
     }
 }
 .modal-body {
-    height: 60vh;
+    max-height: 60vh;
     overflow: auto;
 }
 .modal-footer {

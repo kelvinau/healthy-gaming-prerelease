@@ -79,7 +79,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
                     // Send email
-                    mail($email, "Verification", $email_msg, $headers);
+                    mail($email, "Verification for HealthyGaming", $email_msg, $headers);
                 }  
                 else {
                     //echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
