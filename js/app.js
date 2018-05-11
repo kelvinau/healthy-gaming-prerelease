@@ -58,6 +58,7 @@ $(document).ready(function() {
         onLeave: onSectionleave,
         afterLoad: afterSectionLoad,
         responsiveWidth: 500,
+        normalScrollElements: '.modal',
         afterRender: function(e) {
             $('.navbar a.nav-link[href="' + getCurrentAnchor() +'"]').parent().addClass('active');
         },
