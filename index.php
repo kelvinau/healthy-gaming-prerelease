@@ -297,6 +297,8 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         else window.addEventListener('load', loadDeferredStyles);
         </script>
         <!-- For development -->
-        <script defer src="js/app.min.js?<?= time() ?>"></script>
+        <!-- <script defer src="js/app.min.js?<?= time() ?>"></script> -->
+        <!-- For development -->
+        <script defer src="js/app.min.js"></script>
     </body>
 </html>
