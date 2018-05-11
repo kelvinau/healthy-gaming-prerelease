@@ -57,7 +57,8 @@ $(document).ready(function() {
         //paddingBottom: '2rem',
         onLeave: onSectionleave,
         afterLoad: afterSectionLoad,
-        responsiveWidth: 500,
+        //responsiveWidth: 500,
+        autoScrolling: false,
         normalScrollElements: '.modal',
         afterRender: function(e) {
             $('.navbar a.nav-link[href="' + getCurrentAnchor() +'"]').parent().addClass('active');

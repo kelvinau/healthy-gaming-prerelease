@@ -59,9 +59,11 @@ p {
     text-align: justify;
 }
 .bottom-info {
-    font-size: 1.2em;
+    margin-top: 8%;
+    padding-bottom: 2%;
+    font-size: 8rem;
     .info {
-        font-size: 0.5em;
+        font-size: 0.5rem;
     }
 }
 .navbar-nav {
@@ -156,6 +158,7 @@ p {
         padding-left: 0;
         padding-right: 0;
         .content-wrapper {
+            margin: 0;
             .founder-img-container {
                 padding-left: $founder-section-padding;
                 .founder-img {
@@ -164,7 +167,7 @@ p {
                 }
             }
             .founder-description {
-                padding-left: 1%;
+                padding-left: 7%;
                 padding-right: 7%;
                 //padding: 0 5%;
                 //width: 75%;
@@ -213,14 +216,11 @@ p {
     padding: 1rem;
 }
 .bottom-info {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%);
     text-align: center;
 }
 
 .joystick-container {
+    z-index: 10;
     position: fixed;
     bottom: 0;
     right: $joystick-width;
@@ -287,8 +287,8 @@ p {
     }
     .navbar {
         .logo {
-            height: $navbar-height - 25;
-            width: #{320/(100/($navbar-height - 25))};
+            height: $navbar-height - 20;
+            width: #{320/(100/($navbar-height - 20))};
         }
         .controller {
             height: $navbar-height ;
@@ -319,9 +319,9 @@ p {
         font-size: 1rem;
     }
     .bottom-info {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         .info {
-            font-size: 0.3rem;
+            font-size: 0.5rem;
         }
     }
     .background-img.background-1 {
