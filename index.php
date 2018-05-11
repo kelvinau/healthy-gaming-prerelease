@@ -60,6 +60,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         </script>
         <title>Healthy Gaming</title>
         <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
+        <meta name="keywords" content="Healthy Gaming, Healthygaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming" />
         <link rel="shortcut icon" href="image/favicon.ico" />
     </head>
     <body>
