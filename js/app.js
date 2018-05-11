@@ -50,6 +50,7 @@ $(document).ready(function() {
         }
     }).on('touchend mouseup', onMouseUp); 
 
+    // TODO: Just use scrollTop.....
 	$('#main').fullpage({
         menu: '#menu',
         anchors: anchors,
@@ -58,6 +59,7 @@ $(document).ready(function() {
         onLeave: onSectionleave,
         afterLoad: afterSectionLoad,
         //responsiveWidth: 500,
+        fitToSection: false,
         autoScrolling: false,
         normalScrollElements: '.modal',
         afterRender: function(e) {
@@ -66,9 +68,6 @@ $(document).ready(function() {
     });
     
     $(".navbar .nav-link").on("click", function(){
-       // $(".navbar").find(".active").removeClass("active");
-        //$(this).parent().addClass("active");
-        
         $('.navbar-collapse').collapse('hide');
     });
 

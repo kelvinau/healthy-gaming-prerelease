@@ -27,4 +27,4 @@ Healthygaming is a social enterprise project that aims to help gamers find a goo
 css  
 `scss --sourcemap=none --style compressed --watch scss/app.scss:app.min.css`  
 js  
-`uglifyjs lib/jquery-3.3.1.min.js lib/bootstrap.min.js lib/jquery.fullpage.min.js app.js --compress -o app.min.js`
+`uglifyjs lib/jquery-3.3.1.min.js lib/bootstrap.min.js lib/jquery.fullpage.js app.js --compress -o app.min.js`
