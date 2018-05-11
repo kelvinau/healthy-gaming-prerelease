@@ -53,7 +53,7 @@ $(document).ready(function() {
 	$('#main').fullpage({
         menu: '#menu',
         anchors: anchors,
-        paddingTop: screen.width > 992 ? '66px' : '120px', // same as navbar-height
+        paddingTop: screen.width > 992 ? '68px' : '120px', // same as navbar-height
         //paddingBottom: '2rem',
         onLeave: onSectionleave,
         afterLoad: afterSectionLoad,

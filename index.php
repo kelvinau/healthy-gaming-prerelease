@@ -108,8 +108,10 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             </div>
             <div class="section founder background-img background-2" data-anchor="founder">
                 <div class="content-wrapper row">
-                    <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div>
-                    <div class="col-4"></div>
+                    <div class="col-4 founder-img-container">
+                        <!-- <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div> -->
+                        <img class="founder-img" src="image/founders.jpg">
+                    </div>
                     <div class="col-8">
                         <div class="founder-description">
                             <h2>About the Founders</h2>
@@ -180,9 +182,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             </div>
             <div class="section faq background-img background-4" data-anchor="faq">
                 <div class="content-wrapper">
-                    <div class="row">
-                        FAQ
-                    </div>
+                    <h2>FAQ</h2>
                     <div class="question-container">
                         <p class="question">Q: When will this project be launched?</p>
                         <p class="anwser">

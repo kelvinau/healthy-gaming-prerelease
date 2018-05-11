@@ -1,9 +1,10 @@
 $navbar-height-mobile: 120px;
-$navbar-height: 66px;
+$navbar-height: 68px;
 $joystick-width: 10rem;
 $joystick-height: 10rem;
 $founder-img-width-mobile: 330px;
 $founder-img-width: 400px;
+$founder-section-padding: 5%;
 
 @import "bootstrap.min.css";
 @import "jquery.fullpage.min.css";
@@ -28,8 +29,8 @@ body *{
         }
     }
     .logo {
-        height: $navbar-height-mobile;
-        width: #{320/(100/$navbar-height-mobile)};
+        height: $navbar-height-mobile - 60;
+        width: #{320/(100/($navbar-height-mobile - 60))};
     }
     .controller {
         height: $navbar-height-mobile;
@@ -48,13 +49,13 @@ body *{
     }
 }
 h2 {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 h4 {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 p {
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: justify;
 }
 .bottom-info {
@@ -92,11 +93,12 @@ p {
     }    
     &.founder-img {
         background-image: url(../image/founders.jpg);
-        position: absolute;      
+        margin-top: 8px;
+        //position: absolute;      
         width: $founder-img-width-mobile;
         height: #{2708/(2031/$founder-img-width-mobile)};
-        top: calc(50% - #{2708/(2031/$founder-img-width-mobile)/2});
-        left: calc(#{(200/12)}% - #{$founder-img-width-mobile/2});
+        //top: calc(50% - #{2708/(2031/$founder-img-width-mobile)/2});
+        //left: calc(#{(200/12)}% - #{$founder-img-width-mobile/2});
     }
     &.logo {
         background-image: url(../image/logo.png);
@@ -154,19 +156,17 @@ p {
         padding-left: 0;
         padding-right: 0;
         .content-wrapper {
-            // display: flex;
             .founder-img-container {
+                padding-left: $founder-section-padding;
                 .founder-img {
-                    width: 350px;
-                    height: 466px;
-
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    width: $founder-img-width-mobile;
+                    height: #{2708/(2031/$founder-img-width-mobile)};
                 }
             }
             .founder-description {
-                padding: 0 5%;
+                padding-left: 1%;
+                padding-right: 7%;
+                //padding: 0 5%;
                 //width: 75%;
             }
         }
@@ -204,7 +204,7 @@ p {
         .fp-tableCell {
             vertical-align: top;
             .content-wrapper {
-                padding-top: 15px;
+                padding-top: 45px;
             }
         }
     }
@@ -279,6 +279,7 @@ p {
         }
     }
 }
+@media (min-width: 992px) {}
 // DON"T DO THIS LATER
 @media (min-width: 992px) {
     .navbar-nav {
@@ -286,12 +287,12 @@ p {
     }
     .navbar {
         .logo {
-            height: $navbar-height - 11;
-            width: #{320/(100/($navbar-height - 11))};
+            height: $navbar-height - 25;
+            width: #{320/(100/($navbar-height - 25))};
         }
         .controller {
-            height: $navbar-height - 11;
-            width: #{457/(390/($navbar-height - 11))};
+            height: $navbar-height ;
+            width: #{457/(390/($navbar-height))};
         }
     }
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -302,34 +303,34 @@ p {
     }
     h2 {
         //font-size: 2rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     h4 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     p {
         //font-size: 0.8rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .project p {
-        font-size: 1.5rem;
-    }
-    .faq p {
         font-size: 1.2rem;
     }
+    .faq p {
+        font-size: 1rem;
+    }
     .bottom-info {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         .info {
-            font-size: 0.5rem;
+            font-size: 0.3rem;
         }
     }
     .background-img.background-1 {
         background-position-y: 56px;
     }
-    .background-img.founder-img {
+    .section.founder .content-wrapper .founder-img-container .founder-img {
         width: $founder-img-width;
         height: #{2708/(2031/$founder-img-width)};
-        top: calc(50% - #{2708/(2031/$founder-img-width)/2});
-        left: calc(#{(200/12)}% - #{$founder-img-width/2});
+        //top: calc(50% - #{2708/(2031/$founder-img-width)/2});
+        //left: calc(#{(200/12)}% - #{$founder-img-width/2});
     }
 }
