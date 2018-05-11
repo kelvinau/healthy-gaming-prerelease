@@ -60,7 +60,9 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         </script>
         <title>Healthy Gaming</title>
         <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
-        <meta name="keywords" content="Healthy Gaming, Healthygaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming" />
+        <meta name="keywords" content="
+        Healthy Gaming, Healthygaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming, 
+        addicted to gaming, Negative effect of gaming, Gamer Mental Health" />
         <link rel="shortcut icon" href="image/favicon.ico" />
     </head>
     <body>
@@ -101,13 +103,13 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         </nav>
 
         <div id="main">
-            <div class="section project background-img background-1" data-anchor="project">
+            <div class="section project background-img background-1" data-anchor="project" id="section-project">
                 <div class="content-wrapper">
                     <h2>About the Project</h2>
                     <p>Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming. The project will provide a platform to bring gamers together as a community, and various features will be introduced to motivate users and provide the knowledge needed in order to successfully achieve individual set goals.</p>
                 </div>
             </div>
-            <div class="section founder background-img background-2" data-anchor="founder">
+            <div class="section founder background-img background-2" data-anchor="founder" id="section-founder">
                 <div class="content-wrapper row">
                     <div class="col-4 founder-img-container">
                         <!-- <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div> -->
@@ -126,7 +128,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     </div>
                 </div>
             </div>
-            <div class="section signup background-img background-3" data-anchor="signup" onsubmit="return signup()">
+            <div class="section signup background-img background-3" data-anchor="signup" id="section-signup" onsubmit="return signup()">
                 <div class="content-wrapper">
                 <h2>Signup</h2>
                     <p>If you're interested in joining, please tell us a little bit about yourself and register your interest below.</p>
@@ -181,7 +183,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <p><small>*This is not your username on our platform, it is how you wish to be referred to when we contact you.</small></p>
                 </div>
             </div>
-            <div class="section faq background-img background-4" data-anchor="faq">
+            <div class="section faq background-img background-4" data-anchor="faq" id="section-faq">
                 <div class="content-wrapper">
                     <h2>FAQ</h2>
                     <div class="question-container">
@@ -294,6 +296,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
         else window.addEventListener('load', loadDeferredStyles);
         </script>
-        <script defer src="js/app.min.js"></script>
+        <!-- For development -->
+        <script defer src="js/app.min.js?<?= time() ?>"></script>
     </body>
 </html>
