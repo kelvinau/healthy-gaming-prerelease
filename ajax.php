@@ -48,7 +48,8 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                 
                 if ($result = $stmt->execute()) {
                     echo json_encode(["status" => 1, "msg" => 
-                    "Thank you for registering your interest. To complete the registration, please check your inbox and verify your email address."]);
+                    "Thank you for registering your interest. To complete the registration, please check your inbox and verify your email address. If you do not receive an email within a few minutes, please check your Junk/Spam folder.
+                    "]);
                     unset($_SESSION['csrf_token']);
     
                     $email_msg = "
