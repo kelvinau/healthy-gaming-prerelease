@@ -71,9 +71,7 @@ $(document).ready(function() {
         $('.navbar-collapse').collapse('hide');
     });
 
-    setTimeout(function() {
-        $('.alert-success').fadeIn(1000);
-    }, 500);
+    $('.alert-success').fadeIn(1000);
 
     function onMouseEnter() {
         if (joystick_state === 0) {
