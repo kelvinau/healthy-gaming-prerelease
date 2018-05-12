@@ -53,7 +53,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
     
                     $email_msg = "
                         <div style='text-align:center;'>
-                            <img src='https://healthygaming.info/image/logo.png'>
+                            <img src='https://healthygaming.info/image/logo_whitebg.png' width='250'>
                         </div>
                         Dear {$name},<br><br>
 
@@ -72,8 +72,8 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                         </div>
                     ";
                     
-                    //$headers = "From: Healthy Gaming <contact@healthygaming.info> \r\n";
-                    $headers = "Reply-to: contact@healthygaming.info\r\n";
+                    $headers = "From: HG Verification <no-reply@wahosting.com> \r\n";
+                    //$headers = "Reply-to: contact@healthygaming.info\r\n";
                     $headers .= "Bcc: contact@healthygaming.info\r\n";
                     $headers .= "MIME-Version: 1.0\r\n";
                     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
