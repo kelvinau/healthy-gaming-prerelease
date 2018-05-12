@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$VERSION = '1';
+
 unset($_SESSION['csrf_token']);
 $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
 
@@ -281,7 +283,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             </div>
         </div>
         <noscript id="deferred-styles">
-           <link href="css/app.min.css" rel="stylesheet">
+           <link href="css/app.min.css?v=<?= $VERSION ?>" rel="stylesheet">
         </noscript>
         <script>
         var loadDeferredStyles = function() {
@@ -298,6 +300,6 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         </script>
         <!-- For development -->
         <!-- <script defer src="js/app.min.js?<?= time() ?>"></script> -->
-        <script defer src="js/app.min.js"></script>
+        <script defer src="js/app.min.js?v=<?= $VERSION ?>"></script>
     </body>
 </html>
