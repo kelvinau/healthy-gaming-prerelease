@@ -58,15 +58,15 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 
             gtag('config', 'UA-117998010-3');
         </script>
-        <title>Healthygaming - Help Gamers Fnd Balance between Healthy Lifestyle and Gaming</title>
-        <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
+        <title>HealthyGaming - Help Gamers Fnd Balance between Healthy Lifestyle and Gaming</title>
+        <meta name="description" content="HealthyGaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
         <meta name="keywords" content="
-        Healthy Gaming, Healthygaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming, 
+        Healthy Gaming, HealthyGaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming, 
         addicted to gaming, Negative effect of gaming, Gamer Mental Health" />
         <link rel="shortcut icon" href="image/favicon.ico" />
     </head>
     <body>
-        <h1 style="display: none;">Healthygaming</h1>
+        <h1 style="display: none;">HealthyGaming - Help Gamers Fnd Balance between Healthy Lifestyle and Gaming</h1>
         <?php if ($verified) : ?>
         <div class="alert alert-success alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -77,7 +77,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         </div>
         <?php endif ?>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-            <a class="navbar-brand background-img logo" href="#" title="Healthygaming" onclick="gotoTop()"></a>
+            <a class="navbar-brand background-img logo" href="#" title="HealthyGaming" onclick="gotoTop()"></a>
             <button class="navbar-toggler" type="button" 
             data-toggle="collapse" data-target="#navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -106,13 +106,12 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             <div class="section project background-img background-1" data-anchor="project" id="section-project">
                 <div class="content-wrapper">
                     <h2>About the Project</h2>
-                    <p>Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming. The project will provide a platform to bring gamers together as a community, and various features will be introduced to motivate users and provide the knowledge needed in order to successfully achieve individual set goals.</p>
+                    <p>HealthyGaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming. The project will provide a platform to bring gamers together as a community, and various features will be introduced to motivate users and provide the knowledge needed in order to successfully achieve individual set goals.</p>
                 </div>
             </div>
             <div class="section founder background-img background-2" data-anchor="founder" id="section-founder">
                 <div class="content-wrapper row">
                     <div class="col-4 founder-img-container">
-                        <!-- <div class="background-img founder-img" title="Founders of Healthygaming Christoffer Johansson and Troy Liu"></div> -->
                         <img class="founder-img" src="image/founders.jpg">
                     </div>
                     <div class="col-8">
@@ -129,7 +128,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             <p>Troy Liu is a graphical designer by day and a gamer by night. Through a co-operation with the Government of Canada and volunteer work at the Isa Mundo Foundation, Troy has been able to contribute to those less fortunate and see firsthand the difference he can make within marginalized communities.</p>
                             <p><i>"I'm a simple man. I see a good opportunity, I take it. 
                             I have had my own share of gaming issues in the past and 
-                            I believe Healthygaming has the ability to change lives for the better."</i></p>
+                            I believe HealthyGaming has the ability to change lives for the better."</i></p>
                         </div>
                     </div>
                 </div>
@@ -195,7 +194,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <div class="question-container">
                         <p class="question">Q: When will this project be launched?</p>
                         <p class="anwser">
-                            A: Healthygaming is projected to launch in late 2018.
+                            A: HealthyGaming is projected to launch in late 2018.
                         </p>
                     </div>
                     <div class="question-container">
@@ -226,7 +225,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         <div class="contact">
                             contact@healthygaming.info
                         </div>
-                        <div class="name">Healthygaming<sup>TM</sup></div>
+                        <div class="name">HealthyGaming<sup>TM</sup></div>
                         <div class="info">
                             <div>Registered in Sweden.</div>
                             <div>Registration No. 2018/02709.</div>
@@ -257,10 +256,10 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     </div>
                     <div class="modal-body" id="modalBody">
                         <div class="disclaimer">
-                            Healthygaming<sup>TM</sup> provides the [https://healthygaming.info] website as a service to the public and website owners.<br>
+                            HealthyGaming<sup>TM</sup> provides the [https://healthygaming.info] website as a service to the public and website owners.<br>
                             By reading this, you acknowledge that you are only allowed to register information about yourself and give us the consent to 
                             process your registration with our Social Enterprise.<br>
-                            The information provided when signing up, which is stored by Healthygaming<sup>TM</sup> 
+                            The information provided when signing up, which is stored by HealthyGaming<sup>TM</sup> 
                             is protected according to the EU General Data Protection Regulation (2016/679) and will not be shared with any third party.<br> 
                             This data will only be used for the purpose of learning more about our target audience, 
                             which allows us to tailor-make the website and find partners that benefits those signing up in multiple ways.<br>
@@ -273,7 +272,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             We will not delete any data that is stored during the pre-release unless an SAR (Subject Access Request) is sent to 
                             <a href="mailto:contact@healthygaming.info">contact@healthygaming.info</a> where we are requested to do so.<br></br>
                             When signing up, you agree to this disclaimer and acknowledge that you have read all the information. 
-                            You also accept that Healthygaming<sup>TM</sup> is not responsible for, and expressly disclaims all liability for damages of any kind arising out of use, 
+                            You also accept that HealthyGaming<sup>TM</sup> is not responsible for, and expressly disclaims all liability for damages of any kind arising out of use, 
                             reference to, or reliance on any information contained within the site. 
                             While the information contained within the site is encrypted and periodically updated, 
                             no guarantee is given that the encrypted personal information is correct, complete, and up-to-date. 

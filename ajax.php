@@ -63,10 +63,10 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                         Once your email has been verified, you will become eligible for a 14-day free trial of Premium Membership upon release.<br><br>
 
                         Best Regards,<br>
-                        Healthygaming<br><br><br><br>
+                        HealthyGaming<br><br><br><br>
 
                         <div style='text-align: center;'>
-                            <div>Healthygaming<sup>TM</sup></div>
+                            <div>HealthyGaming<sup>TM</sup></div>
                             <div>Registered in Sweden.</div>
                             <div>Registration No. 2018/02709.</div>
                         </div>
@@ -79,7 +79,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
                     // Send email
-                    mail($email, "Verification for Healthygaming", $email_msg, $headers);
+                    mail($email, "Verification for HealthyGaming", $email_msg, $headers);
                 }  
                 else {
                     //echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
