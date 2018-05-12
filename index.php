@@ -58,7 +58,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 
             gtag('config', 'UA-117998010-3');
         </script>
-        <title>Healthy Gaming</title>
+        <title>Healthygaming</title>
         <meta name="description" content="Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
         <meta name="keywords" content="
         Healthy Gaming, Healthygaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming, 
@@ -66,7 +66,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         <link rel="shortcut icon" href="image/favicon.ico" />
     </head>
     <body>
-        <h1 style="display: none;">Healthy Gaming</h1>
+        <h1 style="display: none;">Healthygaming</h1>
         <?php if ($verified) : ?>
         <div class="alert alert-success alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -77,7 +77,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         </div>
         <?php endif ?>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-            <a class="navbar-brand background-img logo" href="#" title="Healthy Gaming" onclick="gotoTop()"></a>
+            <a class="navbar-brand background-img logo" href="#" title="Healthygaming" onclick="gotoTop()"></a>
             <button class="navbar-toggler" type="button" 
             data-toggle="collapse" data-target="#navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -54,7 +54,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                     $email_msg = "
                         <div style='text-align:center;'>
                             <img src='https://healthygaming.info/image/logo_whitebg.png' width='250'>
-                        </div>
+                        </div><br><br>
                         Dear {$name},<br><br>
 
                         Thank you for registering on HealthyGaming.info. Please <a href='https://healthygaming.info/?hash={$hash}'>click here</a> 
@@ -62,7 +62,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                         
                         Once your email has been verified, you will become eligible for a 14-day free trial of Premium Membership upon release.<br><br>
 
-                        Warm Regards,<br>
+                        Best Regards,<br>
                         Healthygaming<br><br><br><br>
 
                         <div style='text-align: center;'>
