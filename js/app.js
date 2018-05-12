@@ -71,7 +71,9 @@ $(document).ready(function() {
         $('.navbar-collapse').collapse('hide');
     });
 
-    $('.alert-success').fadeIn(1000);
+    if ($('body.verified').length) {
+        showModal('verified');
+    }
 
     function onMouseEnter() {
         if (joystick_state === 0) {
@@ -212,13 +214,20 @@ function showModal(type, event, msgObj) {
         title = 'Disclaimer';
         $('#modalBody .disclaimer').show();
         $('#modalBody .placeholder').hide();
+        $('body.verified').removeClass('verified');
+    }
+    else if (type === 'verified') {
+        title = 'Successful';
+        $('#modalBody .placeholder').show();
+        $('#modalBody .disclaimer').hide();
     }
     else {
         title = msgObj.title;
         body = msgObj.body;
         $('#modalBody .placeholder').text(body);
         $('#modalBody .placeholder').show();
-        $('#modalBody .disclaimer').hide()
+        $('#modalBody .disclaimer').hide();
+        $('body.verified').removeClass('verified');
     }
     $('#modalTitle').text(title);
     $('#modal').modal();

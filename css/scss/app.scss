@@ -258,6 +258,14 @@ p {
     display: none;
     padding-right: 2rem;
 }
+body.verified {
+    .modal-backdrop {
+        display: none;
+    }
+    .modal {
+        pointer-events: none;
+    }
+}
 .modal-header {
     background-color: #002f3d;
     color: white;

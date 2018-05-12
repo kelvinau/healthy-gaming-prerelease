@@ -65,17 +65,8 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         addicted to gaming, Negative effect of gaming, Gamer Mental Health" />
         <link rel="shortcut icon" href="image/favicon.ico" />
     </head>
-    <body>
+    <body class="<?= $verified ? 'verified' : '' ?>" >
         <h1 style="display: none;">HealthyGaming - Help Gamers Fnd Balance between Healthy Lifestyle and Gaming</h1>
-        <?php if ($verified) : ?>
-        <div class="alert alert-success alert-dismissible">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>
-                Thank you for your time and interest.<br>
-                Your Email is now verified, and your registration is complete. <br>
-                For further questions, don’t hesitate to contact us. </strong>
-        </div>
-        <?php endif ?>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
             <a class="navbar-brand background-img logo" href="#" title="HealthyGaming" onclick="gotoTop()"></a>
             <button class="navbar-toggler" type="button" 
@@ -277,7 +268,11 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             While the information contained within the site is encrypted and periodically updated, 
                             no guarantee is given that the encrypted personal information is correct, complete, and up-to-date. 
                         </div>
-                        <div class="placeholder"></div>
+                        <div class="placeholder">
+                            Thank you for your time and interest.<br>
+                            Your Email is now verified, and your registration is complete. <br>
+                            For further questions, don’t hesitate to contact us.
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -303,7 +298,6 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         </script>
         <!-- For development -->
         <!-- <script defer src="js/app.min.js?<?= time() ?>"></script> -->
-        <!-- For development -->
         <script defer src="js/app.min.js"></script>
     </body>
 </html>
