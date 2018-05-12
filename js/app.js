@@ -213,11 +213,13 @@ function showModal(type, event, msgObj) {
         event.preventDefault();
         title = 'Disclaimer';
         $('#modalBody .disclaimer').show();
+        $('#modalBody .placeholder').hide();
     }
     else {
         title = msgObj.title;
         body = msgObj.body;
         $('#modalBody .placeholder').text(body);
+        $('#modalBody .placeholder').show();
         $('#modalBody .disclaimer').hide()
     }
     $('#modalTitle').text(title);
