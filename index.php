@@ -60,7 +60,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 
             gtag('config', 'UA-117998010-3');
         </script>
-        <title>HealthyGaming - Help Gamers Fnd Balance between Healthy Lifestyle and Gaming</title>
+        <title>HealthyGaming</title>
         <meta name="description" content="HealthyGaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
         <meta name="keywords" content="
         Healthy Gaming, HealthyGaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming, 
@@ -68,7 +68,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         <link rel="shortcut icon" href="image/favicon.ico" />
     </head>
     <body class="<?= $verified ? 'verified' : '' ?>" >
-        <h1 style="display: none;">HealthyGaming - Help Gamers Fnd Balance between Healthy Lifestyle and Gaming</h1>
+        <h1 style="display: none;">HealthyGaming</h1>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
             <a class="navbar-brand background-img logo" href="#" title="HealthyGaming" onclick="gotoTop()"></a>
             <button class="navbar-toggler" type="button" 
@@ -133,6 +133,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <form class="signup-form">
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" placeholder="Name" required>
+                            <p><small>* This is not your username on our platform. It is how you wish to be referred to when we contact you.</small></p>
                         </div>
                         <div class="form-group">
 
@@ -178,7 +179,6 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         <a href="#" onclick="showModal('disclaimer', event)">disclaimer</a>
                     and to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>
                     <p>After verifying your email, you will be eligible for a 14-day free trial of premium membership upon account registration.</p>
-                    <p style="margin-bottom: 0;"><small>*This is not your username on our platform, it is how you wish to be referred to when we contact you.</small></p>
                 </div>
             </div>
             <div class="section faq background-img background-4" data-anchor="faq" id="section-faq">
