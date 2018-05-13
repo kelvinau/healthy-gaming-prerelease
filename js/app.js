@@ -203,6 +203,7 @@ function signup() {
             $('.error-msg').text('');
         }, function() {
             signUpClicked = false;
+            $('.error-msg').text('Error occurred when submitting the information');
         })
     }
     return false;

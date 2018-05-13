@@ -89,7 +89,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         <a class="nav-link" href="#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link background-img controller" href="#signup" title="Sign Up"></a>
+                        <a class="nav-link background-img controller" href="#signup" title="Click Here to Register"></a>
                     </li>
                 </ul>
             </div>
@@ -133,7 +133,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <form class="signup-form">
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" placeholder="Name" required>
-                            <p><small>* This is not your username on our platform. It is how you wish to be referred to when we contact you.</small></p>
+                            <p><small>This is how you wish to be referred to when we contact you.</small></p>
                         </div>
                         <div class="form-group">
 
