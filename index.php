@@ -89,7 +89,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         <a class="nav-link" href="#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link background-img controller" href="#signup" title="Click Here to Register"></a>
+                        <a class="nav-link background-img controller" href="#signup" title="Sign Up"></a>
                     </li>
                 </ul>
             </div>
@@ -171,7 +171,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         </div>
                         <input name="csrf_token" id="csrf_token" value="<?= $_SESSION['csrf_token'] ?>" type="hidden">
                         <div class="submit-container">
-                            <button type="submit" class="background-img signup_btn" title="Sign Up" id="signUp-btn"></button>
+                            <button type="submit" class="background-img signup_btn" title="Click Here to Register" id="signUp-btn"></button>
                             <p class="error-msg"></p>
                         </div>
                     </form>
