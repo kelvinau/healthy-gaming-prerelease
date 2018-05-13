@@ -133,7 +133,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <form class="signup-form">
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" placeholder="Name" required>
-                            <p><small>This is how you wish to be referred to when we contact you.</small></p>
+                            <p><small>* This is how you wish to be referred to when we contact you.</small></p>
                         </div>
                         <div class="form-group">
 
