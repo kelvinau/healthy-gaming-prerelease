@@ -99,16 +99,14 @@ $(document).ready(function() {
             timer = null;
         }
         if (mouseDown) {
-            hideAllJ();
+			showIcon(isTop);
             if (isTop) {
-                showJ($up_2);
                 joystick_state = 3;
                 
                 $.fn.fullpage.moveSectionUp();
                 timer = setInterval($.fn.fullpage.moveSectionUp, MOVE_SECTION_TIME);
             }
             else {
-                showJ($down_2);
                 joystick_state = 5;
         
                 $.fn.fullpage.moveSectionDown();
@@ -116,26 +114,33 @@ $(document).ready(function() {
             }
         }
     }
+	
+	function showIcon(isUp) {
+		hideAllJ();
+		if (isUp) {
+			showJ($up_2);
+		}
+		else {
+			showJ($down_2);
+		}
+	}
 
     function onSectionleave(index, nextIndex, direction) {
         $(".navbar").find(".active").removeClass("active");
         $('.navbar a.nav-link[href="#' + anchors[nextIndex - 1] +'"]').parent().addClass('active');
-        if (joystick_state !== 3 && joystick_state !== 5) {
-            hideAllJ();
-            if (direction === 'up') {
-                showJ($up_2);
-            }
-            else if (direction === 'down') {
-                showJ($down_2);
-            }
-        }
+        
+		showIcon(direction === 'up');
     }
 
     function afterSectionLoad() {
         if (joystick_state !== 3 && joystick_state !== 5) {
-            hideAllJ();
-            showJ($idle_2);
-            joystick_state = 0;
+			var timeout = joystick_state === 0 ? 50 : 0;
+			setTimeout(function() {
+				hideAllJ();
+				showJ($idle_2);
+				joystick_state = 0;
+			}, timeout);
+
         }
     }
 
