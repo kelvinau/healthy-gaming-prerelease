@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$VERSION = '1';
+$VERSION = '1.1';
 
 unset($_SESSION['csrf_token']);
 $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
