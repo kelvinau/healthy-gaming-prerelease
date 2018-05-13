@@ -17,6 +17,7 @@ $(document).ready(function() {
     $down_2 = $('.down_2');
     var anchors = ['project', 'founder', 'signup', 'faq'];
     var timer;
+	var scrollingTimeout;
     var mouseDown = false;
     var clickHandled = false;
 
@@ -57,7 +58,6 @@ $(document).ready(function() {
         paddingTop: screen.width > 992 ? '68px' : '120px', // same as navbar-height
         //paddingBottom: '2rem',
         onLeave: onSectionleave,
-        afterLoad: afterSectionLoad,
         //responsiveWidth: 500,
         fitToSection: false,
         autoScrolling: false,
@@ -130,17 +130,16 @@ $(document).ready(function() {
         $('.navbar a.nav-link[href="#' + anchors[nextIndex - 1] +'"]').parent().addClass('active');
         
 		showIcon(direction === 'up');
-    }
-
-    function afterSectionLoad() {
-        if (joystick_state !== 3 && joystick_state !== 5) {
-			var timeout = joystick_state === 0 ? 50 : 0;
-			setTimeout(function() {
+		if (joystick_state !== 3 && joystick_state !== 5) {
+			if (scrollingTimeout) {
+				clearTimeout(scrollingTimeout);
+				scrollingTimeout = null;
+			}
+			scrollingTimeout = setTimeout(function() {
 				hideAllJ();
 				showJ($idle_2);
 				joystick_state = 0;
-			}, timeout);
-
+			}, 500);
         }
     }
 
