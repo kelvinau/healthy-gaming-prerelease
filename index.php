@@ -52,13 +52,13 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 <html lang="en">
     <head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119399543-1"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117998010-3"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
-		  gtag('config', 'UA-119399543-1');
+		  gtag('config', 'UA-117998010-3');
 		</script>
         <title>HealthyGaming</title>
         <meta name="description" content="HealthyGaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
