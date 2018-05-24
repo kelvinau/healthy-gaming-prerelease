@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$VERSION = '1.2.2';
+$VERSION = '1.2.3';
 
 unset($_SESSION['csrf_token']);
 $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
@@ -60,7 +60,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 
 		  gtag('config', 'UA-117998010-3');
 		</script>
-        <title>HealthyGaming</title>
+        <title>HealthyGaming - Making a Healthy Difference for Gamers</title>
         <meta name="description" content="HealthyGaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
         <meta name="keywords" content="
         Healthy Gaming, HealthyGaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming, 
