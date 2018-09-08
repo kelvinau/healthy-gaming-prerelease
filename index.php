@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$VERSION = '1.2.3';
+$VERSION = '1.2.4';
 
 unset($_SESSION['csrf_token']);
 $_SESSION['csrf_token'] = base64_encode(openssl_random_pseudo_bytes(32));
@@ -218,7 +218,9 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         <div class="contact">
                             contact@healthygaming.info
                         </div>
-                        <div class="name">HealthyGaming<sup>TM</sup></div>
+                        <div class="name">HealthyGaming<sup>&reg;</sup></div>
+						<div>HealthyGaming Limited</div>
+						<div>20th Floor, Central Tower, 28 Queen’s Road Central, Central, Hong Kong</div>
                         <div class="info">
                             <div>Registered in Sweden.</div>
                             <div>Registration No. 2018/02709.</div>
@@ -249,10 +251,10 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     </div>
                     <div class="modal-body" id="modalBody">
                         <div class="disclaimer">
-                            HealthyGaming<sup>TM</sup> provides the [https://healthygaming.info] website as a service to the public and website owners.<br>
+                            HealthyGaming<sup>&reg;</sup> provides the [https://healthygaming.info] website as a service to the public and website owners.<br>
                             By reading this, you acknowledge that you are only allowed to register information about yourself and give us the consent to 
                             process your registration with our Social Enterprise.<br>
-                            The information provided when signing up, which is stored by HealthyGaming<sup>TM</sup> 
+                            The information provided when signing up, which is stored by HealthyGaming<sup>&reg;</sup> 
                             is protected according to the EU General Data Protection Regulation (2016/679) and will not be shared with any third party.<br> 
                             This data will only be used for the purpose of learning more about our target audience, 
                             which allows us to tailor-make the website and find partners that benefits those signing up in multiple ways.<br>
@@ -265,7 +267,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             We will not delete any data that is stored during the pre-release unless an SAR (Subject Access Request) is sent to 
                             <a href="mailto:contact@healthygaming.info">contact@healthygaming.info</a> where we are requested to do so.<br></br>
                             When signing up, you agree to this disclaimer and acknowledge that you have read all the information. 
-                            You also accept that HealthyGaming<sup>TM</sup> is not responsible for, and expressly disclaims all liability for damages of any kind arising out of use, 
+                            You also accept that HealthyGaming<sup>&reg;</sup> is not responsible for, and expressly disclaims all liability for damages of any kind arising out of use, 
                             reference to, or reliance on any information contained within the site. 
                             While the information contained within the site is encrypted and periodically updated, 
                             no guarantee is given that the encrypted personal information is correct, complete, and up-to-date. 
