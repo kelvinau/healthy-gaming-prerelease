@@ -220,11 +220,8 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         </div>
                         <div class="name">HealthyGaming<sup>&reg;</sup></div>
 						<div>HealthyGaming Limited</div>
-						<div>20th Floor, Central Tower, 28 Queen’s Road Central, Central, Hong Kong</div>
-                        <div class="info">
-                            <div>Registered in Sweden.</div>
-                            <div>Registration No. 2018/02709.</div>
-                        </div>
+						<div>20th Floor, Central Tower, 28 Queen’s Road Central</div>
+                        <div>Central, Hong Kong</div>
                     </div>
                 </div>
             </div>
