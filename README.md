@@ -1,6 +1,6 @@
-# Healthy Gaming
+# HealthyGaming (https://heathygaming.info)
 
-Healthygaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming. The project will provide a platform to bring gamers together as a community, and various features will be introduced to motivate users and provide the knowledge needed in order to successfully achieve individual set goals.
+Healthygaming (https://heathygaming.info) is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming. The project will provide a platform to bring gamers together as a community, and various features will be introduced to motivate users and provide the knowledge needed in order to successfully achieve individual set goals.
 
 ### FAQ
 **Q: When will this project be launched?**
