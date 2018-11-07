@@ -187,13 +187,13 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <div class="question-container">
                         <p class="question">Q: When will this project be launched?</p>
                         <p class="anwser">
-                            A: HealthyGaming is projected to launch in late 2018.
+                            A: HealthyGaming is projected to launch in Spring 2019.
                         </p>
                     </div>
                     <div class="question-container">
-                        <p class="question">Q: Why should I register now if the project doesn't launch until later this year?</p>
+                        <p class="question">Q: Why should I register now if the project doesn't launch until next year?</p>
                         <p class="answer">
-                            A: Your provided information is important for us to tailor-make the ultimate platform, and to find the right partners for our users before the platform is launched.
+                            A: Your provided information is important for us to tailor-make the ultimate platform for you and other users.
                         </p>
                     </div>
                     <div class="question-container">
@@ -214,14 +214,17 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                                 A: The project is currently in development. When it releases, opportunities will become available for you to help out in the community in various ways. At the moment, simply showing your interest by signing up and spreading the word are the best ways to assist us in pushing this project forward. 
                         </p>
                     </div>   
-                    <div class="bottom-info">
-                        <div class="contact">
-                            contact@healthygaming.info
+                    <div class="bottom-info" style="text-align: left;">
+						<div style="margin-bottom: 15px;">CONTACT US</div>
+                        <div class="contact" style="margin-bottom: 15px;">
+							<div>HealthyGaming Limited</div>
+							<div>20<sup>th</sup> Floor, Central Tower, 28 Queen’s Road Central</div>
+							<div>Central, Hong Kong</div>						
                         </div>
-                        <div class="name">HealthyGaming<sup>&reg;</sup></div>
-						<div>HealthyGaming Limited</div>
-						<div>20th Floor, Central Tower, 28 Queen’s Road Central</div>
-                        <div>Central, Hong Kong</div>
+						<div style="margin-bottom: 15px;">Email: <a href="mailto:contact@healthygaming.info">contact@healthygaming.info</a></div>
+						
+                        <div class="name">HealthyGaming<sup>&reg;</sup>. All rights reserved.</div>
+
                     </div>
                 </div>
             </div>
