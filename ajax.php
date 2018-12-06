@@ -81,7 +81,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
 
                     $headers = [
                         "From" => "HG Verification <no-reply@healthygaming.info>",
-                        "Bcc:" => "contact@healthygaming.info",
+                        "Bcc" => "contact@healthygaming.info",
                     ];
                     // Send email
                     mail($email, "Verification for HealthyGaming", $email_msg, $headers);
