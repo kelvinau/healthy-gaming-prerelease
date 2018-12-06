@@ -13,7 +13,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
         $TABLE = 'registration';
 
         $result = validateInput();
-        
+
         if (count($result)) {
             echo json_encode(["status" => 0, "msg" => $result]);
         }
@@ -26,10 +26,10 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
 
             $stmt = $conn->prepare("SELECT email FROM {$TABLE} WHERE email=?");
             $stmt->bind_param("s", $email);
-    
+
             $result = $stmt->execute();
-            $stmt->store_result();    
-                  
+            $stmt->store_result();
+
             if ($stmt->num_rows > 0) {
                 echo json_encode(["status" => 0, "msg" => "This email already exists."]);
             }
@@ -39,28 +39,28 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                     $sql = "SELECT email FROM {$TABLE} WHERE hash='{$hash}'";
                     $result = $conn->query($sql);
                 } while($result->num_rows > 0);
-    
+
                 $stmt = $conn->prepare("
-                INSERT INTO {$TABLE} (email, name, birth_year, gender, country, hash) 
+                INSERT INTO {$TABLE} (email, name, birth_year, gender, country, hash)
                 VALUES (?, ?, ?, ?, ?, '{$hash}')
                 ");
                 $stmt->bind_param("ssiss", $email, $name, $birth_year, $gender, $country);
-                
+
                 if ($result = $stmt->execute()) {
-                    echo json_encode(["status" => 1, "msg" => 
+                    echo json_encode(["status" => 1, "msg" =>
                     "Thank you for registering your interest. To complete the registration, please check your inbox and verify your email address. If you do not receive an email within a few minutes, please check your Junk/Spam folder.
                     "]);
                     unset($_SESSION['csrf_token']);
-    
+
                     $email_msg = "
                         <div style='text-align:center;'>
                             <img src='https://healthygaming.info/image/logo_whitebg.png' width='250'>
                         </div><br><br>
                         Dear {$name},<br><br>
 
-                        Thank you for registering on HealthyGaming.info. Please <a href='https://healthygaming.info/?hash={$hash}'>click here</a> 
+                        Thank you for registering on HealthyGaming.info. Please <a href='https://healthygaming.info/?hash={$hash}'>click here</a>
                         to verify your email address.<br><br>
-                        
+
                         Once your email has been verified, you will become eligible for a 14-day free trial of Premium Membership upon release.<br><br>
 
                         Best Regards,<br>
@@ -72,32 +72,36 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                             <div>Registration No. 2018/02709.</div>
                         </div>
                     ";
-                    
-                    $headers = "From: HG Verification <no-reply@wahosting.com> \r\n";
-                    //$headers = "Reply-to: contact@healthygaming.info\r\n";
-                    $headers .= "Bcc: contact@healthygaming.info\r\n";
-                    $headers .= "MIME-Version: 1.0\r\n";
-                    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
+                    // $headers = "From: HG Verification <no-reply@wahosting.com> \r\n";
+                    // //$headers = "Reply-to: contact@healthygaming.info\r\n";
+                    // $headers .= "Bcc: contact@healthygaming.info\r\n";
+                    // $headers .= "MIME-Version: 1.0\r\n";
+                    // $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+                    $headers = [
+                        "From" => "HG Verification <no-reply@healthygaming.info>",
+                        "Bcc:" => "contact@healthygaming.info",
+                    ];
                     // Send email
                     mail($email, "Verification for HealthyGaming", $email_msg, $headers);
-                }  
+                }
                 else {
                     //echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                     echo json_encode(["status" => 0, "msg" => "Error Occurred"]);
                 }
             }
-    
+
             $stmt->close();
-            $conn->close();    
+            $conn->close();
         }
-        
+
     }
-}   
+}
 
 function validateInput() {
     $msg = [];
- 
+
     if (!isset($_POST['name']) || !strlen($_POST['name'])) {
         array_push($msg, 'Error on Name');
     }
@@ -113,6 +117,6 @@ function validateInput() {
     if (!isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         array_push($msg, 'Error on Email');
     }
-    
+
     return $msg;
 }
