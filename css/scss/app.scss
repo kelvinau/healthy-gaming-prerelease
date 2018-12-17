@@ -241,6 +241,32 @@ p {
   bottom: 0;
   right: $joystick-width;
   -webkit-backface-visibility: hidden;
+  .click-me {
+    position: fixed;
+    bottom: 10rem;
+    height: 1.5rem;
+    width: 9rem;
+    right: 0.5rem;
+    text-align: center;
+    background-color: rgba(187, 135, 61, 0.8);
+    color: white;
+    pointer-events: none;
+    border-radius: 0.5rem;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 1.5rem;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid rgba(187, 135, 61, 0.8);
+      clear: both;
+      pointer-events: none;
+    }
+  }
   cursor: pointer;
   .half {
     position: absolute;
