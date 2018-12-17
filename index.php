@@ -232,6 +232,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             </div>
         </div>
         <div class="joystick-container">
+            <div>Click Me</div>
             <!-- <div class="background-img idle_1" title="Joystick Idle"></div> -->
             <div class="background-img idle_2" title="Joystick Idle"></div>
             <!-- <div class="background-img up_1" title="Joystick Up"></div> -->

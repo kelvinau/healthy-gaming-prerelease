@@ -16,7 +16,7 @@ body * {
 .loading {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   background: #002f3d;
   z-index: 99999;
   img {
