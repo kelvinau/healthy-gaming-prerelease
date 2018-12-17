@@ -20,16 +20,16 @@ if (isset($_GET['hash']) && strlen($_GET['hash']) === 32) {
 
         $stmt = $conn->prepare("SELECT email FROM {$TABLE} WHERE hash=? AND verified=FALSE");
         $stmt->bind_param("s", $hash);
-    
+
         $result = $stmt->execute();
-        $stmt->store_result();    
-    
+        $stmt->store_result();
+
         if ($stmt->num_rows > 0) {
             $sql = "UPDATE {$TABLE} SET verified = TRUE WHERE hash='{$hash}'";
             $result = $conn->query($sql);
             $verified = true;
         }
-    }   
+    }
 }
 
 $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua andBarbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas"
@@ -63,19 +63,21 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
         <title>HealthyGaming - Making a Healthy Difference for Gamers</title>
         <meta name="description" content="HealthyGaming is a social enterprise project that aims to help gamers find a good balance between a healthy lifestyle and gaming."/>
         <meta name="keywords" content="
-        Healthy Gaming, HealthyGaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming, 
+        Healthy Gaming, HealthyGaming, Gamer Social Enterprise, Stress from video games, Project that helps gamers, Mental problem gaming,
         addicted to gaming, Negative effect of gaming, Gamer Mental Health" />
+        <link href="css/app.min.css?v=<?= $VERSION ?>" rel="stylesheet">
         <link rel="shortcut icon" href="image/favicon.ico" />
     </head>
     <body class="<?= $verified ? 'verified' : '' ?>" >
         <h1 style="display: none;">HealthyGaming</h1>
+        <div class="loading"><img width="60" height="60" src="image/loading.gif"></div>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
             <a class="navbar-brand background-img logo" href="#" title="HealthyGaming" onclick="gotoTop()"></a>
-            <button class="navbar-toggler" type="button" 
+            <button class="navbar-toggler" type="button"
             data-toggle="collapse" data-target="#navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
                 <ul class="navbar-nav mt-2 mt-lg-0">
@@ -112,15 +114,15 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             <h2>About the Founders</h2>
                             <h4>Christoffer Johansson</h4>
                             <p>Christoffer Johansson is a social entrepreneur and traveller with a passion for gaming. After a family tragedy in 2010, Christoffer fell into depression and used video games as a temporary escape from reality. After a long fight he pulled himself out in 2014, and as of September 2015, Christoffer holds the most #1 leaderboard scores in a rhythm game called osu!.</p>
-                            <p><i>"What motivates me to start this project is 
-                            the possibility of making a difference for gamers from all over the world. 
-                            After dealing with an addiction to video games of my own, 
-                            I believe I have the capability of using my past experience to the project's advantage, 
+                            <p><i>"What motivates me to start this project is
+                            the possibility of making a difference for gamers from all over the world.
+                            After dealing with an addiction to video games of my own,
+                            I believe I have the capability of using my past experience to the project's advantage,
                             since this project is about helping others succeed in the same battle I once fought and won."</i></p>
                             <h4>Troy Liu</h4>
                             <p>Troy Liu is a graphical designer by day and a gamer by night. Through a co-operation with the Government of Canada and volunteer work at the Isa Mundo Foundation, Troy has been able to contribute to those less fortunate and see firsthand the difference he can make within marginalized communities.</p>
-                            <p><i>"I'm a simple man. I see a good opportunity, I take it. 
-                            I have had my own share of gaming issues in the past and 
+                            <p><i>"I'm a simple man. I see a good opportunity, I take it.
+                            I have had my own share of gaming issues in the past and
                             I believe HealthyGaming has the ability to change lives for the better."</i></p>
                         </div>
                     </div>
@@ -154,9 +156,9 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                         <option value="private">Private</option>
-                                    </select>        
+                                    </select>
                                 </div>
-                            </div>            
+                            </div>
                         </div>
                         <div class="form-group">
                             <select class="form-control" id="country" required>
@@ -165,7 +167,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                                         <option value="<?= $c ?>"><?= $c ?></option>
                                     <?php endforeach ?>
                             </select>
-                        </div>                      
+                        </div>
                         <div class="form-group">
                             <input type="email" class="form-control" id="email" placeholder="Email" required>
                         </div>
@@ -175,7 +177,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             <p class="error-msg"></p>
                         </div>
                     </form>
-                    <p>By registering your interest, you agree to our 
+                    <p>By registering your interest, you agree to our
                         <a href="#" onclick="showModal('disclaimer', event)">disclaimer</a>
                     and to be notified when our Crowdfunding campaign is released and when account registration becomes available.</p>
                     <p>After verifying your email, you will be eligible for a 14-day free trial of premium membership upon account registration.</p>
@@ -201,28 +203,28 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         <p class="answer">
                             A: This is a social enterprise project by gamers, for gamers. We have a unique inside knowledge of how to deal with gaming addictions and combining that with our continuous research, innovative features and our expansive network will allow our community to grow together and help each other strive towards individual goals, regardless of what they are.
                         </p>
-                    </div>        
+                    </div>
                     <div class="question-container">
                         <p class="question">Q: Premium features? Shouldn't a project like this be free for everyone?</p>
                         <p class="answer">
                             A:  All essential content and features will be accessible for free. Upgrading your membership will allow for more features and greater deals while contributing to help run and maintain the project.
                         </p>
-                    </div>      
+                    </div>
                     <div class="question-container">
                         <p class="question">Q:  I'd like to contribute; Is there anything I can do?</p>
                         <p class="answer">
-                                A: The project is currently in development. When it releases, opportunities will become available for you to help out in the community in various ways. At the moment, simply showing your interest by signing up and spreading the word are the best ways to assist us in pushing this project forward. 
+                                A: The project is currently in development. When it releases, opportunities will become available for you to help out in the community in various ways. At the moment, simply showing your interest by signing up and spreading the word are the best ways to assist us in pushing this project forward.
                         </p>
-                    </div>   
+                    </div>
                     <div class="bottom-info" style="text-align: left;">
 						<div style="margin-bottom: 15px;">CONTACT US</div>
                         <div class="contact" style="margin-bottom: 15px;">
 							<div>HealthyGaming Limited</div>
 							<div>20<sup>th</sup> Floor, Central Tower, 28 Queen’s Road Central</div>
-							<div>Central, Hong Kong</div>						
+							<div>Central, Hong Kong</div>
                         </div>
 						<div style="margin-bottom: 15px;">Email: <a href="mailto:contact@healthygaming.info">contact@healthygaming.info</a></div>
-						
+
                         <div class="name">HealthyGaming<sup>&reg;</sup>. All rights reserved.</div>
 
                     </div>
@@ -252,25 +254,25 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <div class="modal-body" id="modalBody">
                         <div class="disclaimer">
                             HealthyGaming<sup>&reg;</sup> provides the [https://healthygaming.info] website as a service to the public and website owners.<br>
-                            By reading this, you acknowledge that you are only allowed to register information about yourself and give us the consent to 
+                            By reading this, you acknowledge that you are only allowed to register information about yourself and give us the consent to
                             process your registration with our Social Enterprise.<br>
-                            The information provided when signing up, which is stored by HealthyGaming<sup>&reg;</sup> 
-                            is protected according to the EU General Data Protection Regulation (2016/679) and will not be shared with any third party.<br> 
-                            This data will only be used for the purpose of learning more about our target audience, 
+                            The information provided when signing up, which is stored by HealthyGaming<sup>&reg;</sup>
+                            is protected according to the EU General Data Protection Regulation (2016/679) and will not be shared with any third party.<br>
+                            This data will only be used for the purpose of learning more about our target audience,
                             which allows us to tailor-make the website and find partners that benefits those signing up in multiple ways.<br>
-                            [Example: If 50,000 US citizens sign up between the age 18-25, 
-                            it would make perfect sense to use our resources looking for partners and deals that 
+                            [Example: If 50,000 US citizens sign up between the age 18-25,
+                            it would make perfect sense to use our resources looking for partners and deals that
                             those 50,000 US citizens can use in a beneficial and good way.]<br><br>
-                            If you want to have your personal information transferred, deleted or want to learn more about the information 
-                            we have and withdraw your consent that you have given us when signing up, you have the right to request this by 
+                            If you want to have your personal information transferred, deleted or want to learn more about the information
+                            we have and withdraw your consent that you have given us when signing up, you have the right to request this by
                             submitting an SAR (Subject Access Request), we are obliged to handle these requests within 30 days.<br>
-                            We will not delete any data that is stored during the pre-release unless an SAR (Subject Access Request) is sent to 
+                            We will not delete any data that is stored during the pre-release unless an SAR (Subject Access Request) is sent to
                             <a href="mailto:contact@healthygaming.info">contact@healthygaming.info</a> where we are requested to do so.<br></br>
-                            When signing up, you agree to this disclaimer and acknowledge that you have read all the information. 
-                            You also accept that HealthyGaming<sup>&reg;</sup> is not responsible for, and expressly disclaims all liability for damages of any kind arising out of use, 
-                            reference to, or reliance on any information contained within the site. 
-                            While the information contained within the site is encrypted and periodically updated, 
-                            no guarantee is given that the encrypted personal information is correct, complete, and up-to-date. 
+                            When signing up, you agree to this disclaimer and acknowledge that you have read all the information.
+                            You also accept that HealthyGaming<sup>&reg;</sup> is not responsible for, and expressly disclaims all liability for damages of any kind arising out of use,
+                            reference to, or reliance on any information contained within the site.
+                            While the information contained within the site is encrypted and periodically updated,
+                            no guarantee is given that the encrypted personal information is correct, complete, and up-to-date.
                         </div>
                         <div class="placeholder">
                             Thank you for your time and interest.<br>
@@ -284,21 +286,18 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                 </div>
             </div>
         </div>
-        <noscript id="deferred-styles">
-           <link href="css/app.min.css?v=<?= $VERSION ?>" rel="stylesheet">
-        </noscript>
         <script>
-        var loadDeferredStyles = function() {
-            var addStylesNode = document.getElementById("deferred-styles");
-            var replacement = document.createElement("div");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement)
-            addStylesNode.parentElement.removeChild(addStylesNode);
-        };
-        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-        else window.addEventListener('load', loadDeferredStyles);
+        // var loadDeferredStyles = function() {
+        //     var addStylesNode = document.getElementById("deferred-styles");
+        //     var replacement = document.createElement("div");
+        //     replacement.innerHTML = addStylesNode.textContent;
+        //     document.body.appendChild(replacement)
+        //     addStylesNode.parentElement.removeChild(addStylesNode);
+        // };
+        // var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        //     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        // if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        // else window.addEventListener('load', loadDeferredStyles);
         </script>
         <!-- For development -->
         <!-- <script defer src="js/app.min.js?<?= time() ?>"></script> -->
