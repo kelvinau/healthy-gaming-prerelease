@@ -2,7 +2,7 @@ $navbar-height-mobile: 120px;
 $navbar-height: 68px;
 $joystick-width: 10rem;
 $joystick-height: 10rem;
-$founder-img-width-mobile: 330px;
+$founder-img-width-mobile: 300px;
 $founder-img-width: 400px;
 $founder-section-padding: 5%;
 
@@ -177,9 +177,11 @@ p {
       margin: 0;
       .founder-img-container {
         padding-left: $founder-section-padding;
+        text-align: center;
         .founder-img {
-          width: $founder-img-width-mobile;
-          height: #{2708/ (2031 / $founder-img-width-mobile)};
+          width: 45%;
+          // width: $founder-img-width-mobile;
+          // height: #{2708/ (2031 / $founder-img-width-mobile)};
         }
       }
       .founder-description {
@@ -331,8 +333,7 @@ body.verified {
     }
   }
 }
-@media (min-width: 992px) {
-}
+
 // DON"T DO THIS LATER
 @media (min-width: 992px) {
   .navbar-nav {
@@ -382,8 +383,14 @@ body.verified {
   }
   .section.founder .content-wrapper .founder-img-container .founder-img {
     width: $founder-img-width;
-    height: #{2708/ (2031 / $founder-img-width)};
+    //height: #{2708/ (2031 / $founder-img-width)};
     //top: calc(50% - #{2708/(2031/$founder-img-width)/2});
     //left: calc(#{(200/12)}% - #{$founder-img-width/2});
+  }
+}
+@media (min-width: 768px) {
+  .section.founder .content-wrapper .founder-img-container .founder-img {
+    width: 100%;
+    margin-top: 15px;
   }
 }

@@ -106,24 +106,40 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             </div>
             <div class="section founder background-img background-2" data-anchor="founder" id="section-founder">
                 <div class="content-wrapper row">
-                    <div class="col-4 founder-img-container">
-                        <img class="founder-img" src="image/founders.jpg" title="HealthyGaming-founders">
+                    <div class="col-12 col-md-4 founder-img-container">
+                        <img class="founder-img" src="image/founders-Christoffer-Troy.jpg" title="founders-Christoffer-Troy">
+                        <img class="founder-img" src="image/founder-Kelvin.jpg" title="founder-Kelvin">
                     </div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                         <div class="founder-description">
                             <h2>About the Founders</h2>
+
                             <h4>Christoffer Johansson</h4>
-                            <p>Christoffer Johansson is a social entrepreneur and traveller with a passion for gaming. After a family tragedy in 2010, Christoffer fell into depression and used video games as a temporary escape from reality. After a long fight he pulled himself out in 2014, and as of September 2015, Christoffer holds the most #1 leaderboard scores in a rhythm game called osu!.</p>
+                            <p>Christoffer Johansson is a social entrepreneur and traveller with a passion for gaming.
+                            After a family tragedy in 2010, Christoffer fell into depression and used video games as a temporary escape from reality.
+                            After a long fight he pulled himself out in 2014, and as of September 2015,
+                            Christoffer holds the most #1 leaderboard scores in a rhythm game called osu!.</p>
                             <p><i>"What motivates me to start this project is
                             the possibility of making a difference for gamers from all over the world.
                             After dealing with an addiction to video games of my own,
                             I believe I have the capability of using my past experience to the project's advantage,
                             since this project is about helping others succeed in the same battle I once fought and won."</i></p>
+
                             <h4>Troy Liu</h4>
-                            <p>Troy Liu is a graphical designer by day and a gamer by night. Through a co-operation with the Government of Canada and volunteer work at the Isa Mundo Foundation, Troy has been able to contribute to those less fortunate and see firsthand the difference he can make within marginalized communities.</p>
+                            <p>Troy Liu is a graphical designer by day and a gamer by night.
+                            Through a co-operation with the Government of Canada and volunteer work at the Isa Mundo Foundation,
+                            Troy has been able to contribute to those less fortunate and see firsthand the difference he can make within marginalized communities.</p>
                             <p><i>"I'm a simple man. I see a good opportunity, I take it.
                             I have had my own share of gaming issues in the past and
                             I believe HealthyGaming has the ability to change lives for the better."</i></p>
+
+                            <h4>Kelvin Au</h4>
+                            <p>Kelvin Au is a software developer who loves technology and believes his passion and coding skills can make lives better.
+                            Kelvin could game for 16 hours non-stop for consecutive days when he was young,
+                            until he found another activity that was more interesting to keep spending days for
+                            - writing code to realize his random ideas</p>
+                            <p><i>"I can be easily addicted to exciting video games, but none of them can be compared to the fun of building something
+                            with just a computer and my determined attitude."</i></p>
                         </div>
                     </div>
                 </div>
