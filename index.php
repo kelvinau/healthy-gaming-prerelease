@@ -114,7 +114,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         <div class="founder-description">
                             <h2>About the Founders</h2>
 
-                            <h4>Christoffer Johansson</h4>
+                            <h4><b>Christoffer Johansson</b></h4>
                             <p>Christoffer Johansson is a social entrepreneur and traveller with a passion for gaming.
                             After a family tragedy in 2010, Christoffer fell into depression and used video games as a temporary escape from reality.
                             After a long fight he pulled himself out in 2014, and as of September 2015,
@@ -125,7 +125,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             I believe I have the capability of using my past experience to the project's advantage,
                             since this project is about helping others succeed in the same battle I once fought and won."</i></p>
 
-                            <h4>Troy Liu</h4>
+                            <h4><b>Troy Liu</b></h4>
                             <p>Troy Liu is a graphical designer by day and a gamer by night.
                             Through a co-operation with the Government of Canada and volunteer work at the Isa Mundo Foundation,
                             Troy has been able to contribute to those less fortunate and see firsthand the difference he can make within marginalized communities.</p>
@@ -133,7 +133,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             I have had my own share of gaming issues in the past and
                             I believe HealthyGaming has the ability to change lives for the better."</i></p>
 
-                            <h4>Kelvin Au</h4>
+                            <h4><b>Kelvin Au</b></h4>
                             <p>Kelvin Au is a software developer who loves technology and believes his passion and coding skills can make lives better.
                             Kelvin could game for 16 hours non-stop for consecutive days when he was young,
                             until he found another activity that was more interesting to keep spending days for
