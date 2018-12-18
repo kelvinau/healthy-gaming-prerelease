@@ -137,7 +137,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                             <p>Kelvin Au is a software developer who loves technology and believes his passion and coding skills can make lives better.
                             Kelvin could game for 16 hours non-stop for consecutive days when he was young,
                             until he found another activity that was more interesting to keep spending days for
-                            - writing code to realize his random ideas</p>
+                            - writing code to realize his random ideas.</p>
                             <p><i>"I can be easily addicted to exciting video games, but none of them can be compared to the fun of building something
                             with just a computer and my determined attitude."</i></p>
                         </div>
