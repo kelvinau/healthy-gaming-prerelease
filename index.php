@@ -209,7 +209,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                         </p>
                     </div>
                     <div class="question-container">
-                        <p class="question">Q: Why should I register now if the project doesn't launch until next year?</p>
+                        <p class="question">Q: Why should I register now if the project hasn't launched this year?</p>
                         <p class="answer">
                             A: Your provided information is important for us to tailor-make the ultimate platform for you and other users.
                         </p>
