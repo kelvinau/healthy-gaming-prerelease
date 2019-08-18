@@ -205,7 +205,7 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <div class="question-container">
                         <p class="question">Q: When will this project be launched?</p>
                         <p class="anwser">
-                            A: HealthyGaming is projected to launch in Spring 2019.
+                            A: HealthyGaming is projected to launch in Autumn 2019.
                         </p>
                     </div>
                     <div class="question-container">
