@@ -61,7 +61,7 @@ if (isset($_POST['csrf_token']) && isset($_SESSION['csrf_token']) && $_POST['csr
                         Thank you for registering on HealthyGaming.info. Please <a href='https://healthygaming.info/?hash={$hash}'>click here</a>
                         to verify your email address.<br><br>
 
-                        Once your email has been verified, you will become eligible for a 14-day free trial of Premium Membership upon release.<br><br>
+                        Once your email has been verified, you will become eligible for a 14-day free trial of Premium Membership upon official launch.<br><br>
 
                         Best Regards,<br>
                         HealthyGaming<br><br><br><br>
