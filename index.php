@@ -81,6 +81,10 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
                 <ul class="navbar-nav mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://projectlusio.com" target="_blank">Go to Project Lusio</a>
+                    </li>
+<!--
                     <li class="nav-item">
                         <a class="nav-link" href="#project">About the Project</a>
                     </li>
@@ -93,11 +97,51 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     <li class="nav-item">
                         <a class="nav-link background-img controller" href="#signup" title="Click here to sign up"></a>
                     </li>
+-->
                 </ul>
             </div>
         </nav>
 
         <div id="main">
+
+              <div class="section">
+                <div class="content-wrapper">
+                    <h2 style="padding-top: 15px;">About the Organization</h2>
+                    <p>
+HealthyGaming is a social innovation start-up looking to provide various initiatives to promote and support the health of gamers (mentally, physically and socially). HealthyGaming aims to help gamers find a good balance between a healthy lifestyle and gaming.
+</p>
+
+                
+                <h2 style="padding-top: 15px; margin-bottom: -30px;">Our Initiatives</h2>
+
+                <div class="content-wrapper row">
+                    <div class="col-12 col-md-2">
+                        <a href="https://projectlusio.com" target="_blank"><img width="100%" src="image/project_lusio.png" title="Project Lusio"></a>
+                    </div>
+                    <div class="col-12 col-md-10 center-text-container">
+                        <p>
+<a href="https://projectlusio.com" target="_blank">Project Lusio</a> is the first initiative launched by HealthyGaming. It is the bomb, providing the most awesome services to help gamers successfully gain control over their physical, social and mental health. 
+</p>
+                    </div>
+                </div>
+
+                    <div style="text-align: left; margin-top: 105px;">
+                        <div class="contact" style="margin-bottom: 15px;">
+							<div>HealthyGaming Limited</div>
+							<div>20<sup>th</sup> Floor, Central Tower, 28 Queen’s Road Central</div>
+							<div>Central, Hong Kong</div>
+                        </div>
+						<div style="margin-bottom: 15px;">Email: <a href="mailto:contact@healthygaming.info">contact@healthygaming.info</a></div>
+
+                        <div class="name">HealthyGaming<sup>&reg;</sup>. All rights reserved.</div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+<!--
             <div class="section project background-img background-1" data-anchor="project" id="section-project">
                 <div class="content-wrapper">
                     <h2>About the Project</h2>
@@ -246,6 +290,9 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                     </div>
                 </div>
             </div>
+
+
+-->
         </div>
         <div class="joystick-container">
             <div class="click-me">Click Me</div>

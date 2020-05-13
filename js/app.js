@@ -68,7 +68,7 @@ $(document).ready(function() {
         .addClass('active');
       setTimeout(function() {
         $('.loading').fadeOut();
-      }, 1000);
+      }, 100);
     },
   });
 
