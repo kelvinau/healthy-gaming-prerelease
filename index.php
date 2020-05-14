@@ -108,7 +108,10 @@ $COUNTRY_LIST = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                 <div class="content-wrapper">
                     <h2 style="padding-top: 15px;">About the Organization</h2>
                     <p>
-HealthyGaming is a social innovation start-up looking to provide various initiatives to promote and support the health of gamers (mentally, physically and socially). HealthyGaming aims to help gamers find a good balance between a healthy lifestyle and gaming.
+HealthyGaming Limited is an organization looking to provide various initiatives to support and improve the mental, physical, and social health of gamers. As an organization focusing on social impact, HealthyGaming Limited is going all out to become the greatest game-changer and difference maker in the esports industry. 
+</p>
+<p>
+Using profits of ours to support individuals, projects and other organizations looking to create positive impact for gamers through our Re-Investment Program, we believe that we have the potential to build positive momentum and have a positive impact on gamers from all over the world.
 </p>
 
                 
@@ -120,7 +123,7 @@ HealthyGaming is a social innovation start-up looking to provide various initiat
                     </div>
                     <div class="col-12 col-md-10 center-text-container">
                         <p>
-<a href="https://projectlusio.com" target="_blank">Project Lusio</a> is the first initiative launched by HealthyGaming. It is the bomb, providing the most awesome services to help gamers successfully gain control over their physical, social and mental health. 
+<a href="https://projectlusio.com" target="_blank">Project Lusio</a> is a platform which provides new opportunities for gamers to come together as a community to make a difference and have a positive impact on the gaming industry.
 </p>
                     </div>
                 </div>
